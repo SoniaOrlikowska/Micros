@@ -1,0 +1,24 @@
+package micros;
+
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() { //co to jest wlasciwie?
+
+            @Override
+            public void run() {
+                JFrame frame = new JFrame("Mikros");
+                frame.getContentPane().add(new MicrosFront().getUI());
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+
+
+            }
+        });
+
+
+    }
+}

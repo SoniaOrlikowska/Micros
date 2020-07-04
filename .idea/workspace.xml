@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dOAnacBZvBM8zEoC8orvOFkC57" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="micros" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="micros.Main" />
+      <module name="Micros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="micros.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicrosFront3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="micros.MicrosFront3" />
+      <module name="Micros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="micros.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProblemGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="micros.ProblemGenerator" />
+      <module name="Micros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="micros.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tokentest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mariusz.Tokentest" />
+      <module name="Micros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mariusz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="panelsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="micros.panelsTest" />
+      <module name="Micros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="micros.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Tokentest" />
+        <item itemvalue="Application.ProblemGenerator" />
+        <item itemvalue="Application.panelsTest" />
+        <item itemvalue="Application.MicrosFront3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="" />
+      <created>1592285934140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592285934140</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="404" y="126" key="#Main_(1)" timestamp="1593753125356">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="404" y="126" key="#Main_(1)/0.23.1440.852@0.23.1440.852" timestamp="1593753125356" />
+    <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1593753939386">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753939386" />
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1593875086274">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1593587853020" />
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1593875086274" />
+    <state x="458" y="203" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1593814897330">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="458" y="203" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.852@0.23.1440.852" timestamp="1593814897330" />
+    <state width="1396" height="129" key="GridCell.Tab.0.bottom" timestamp="1593879614048">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state width="1396" height="153" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593706344878" />
+    <state width="1396" height="129" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593879614048" />
+    <state width="1396" height="129" key="GridCell.Tab.0.center" timestamp="1593879614047">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state width="1396" height="153" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593706344876" />
+    <state width="1396" height="129" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593879614047" />
+    <state width="1396" height="129" key="GridCell.Tab.0.left" timestamp="1593879614046">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state width="1396" height="153" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593706344875" />
+    <state width="1396" height="129" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593879614046" />
+    <state width="1396" height="129" key="GridCell.Tab.0.right" timestamp="1593879614048">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state width="1396" height="153" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593706344877" />
+    <state width="1396" height="129" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593879614048" />
+    <state width="1440" height="163" key="GridCell.Tab.1.bottom" timestamp="1593705910551">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="163" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593705910551" />
+    <state width="1440" height="163" key="GridCell.Tab.1.center" timestamp="1593705910548">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="163" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1593705910548" />
+    <state width="1440" height="163" key="GridCell.Tab.1.left" timestamp="1593705910547">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="163" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1593705910547" />
+    <state width="1440" height="163" key="GridCell.Tab.1.right" timestamp="1593705910549">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="163" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1593705910549" />
+    <state x="229" y="83" key="SettingsEditor" timestamp="1593869331979">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="229" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1593705958775" />
+    <state x="229" y="83" key="SettingsEditor/0.23.1440.852@0.23.1440.852" timestamp="1593869331979" />
+    <state x="399" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1593753054448">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="399" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1592285958348" />
+    <state x="399" y="290" key="com.intellij.ide.util.TipDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753054448" />
+    <state x="389" y="95" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593717100656">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="389" y="95" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.852@0.23.1440.852" timestamp="1593717100656" />
+    <state x="385" y="204" key="run.anything.popup" timestamp="1593718098870">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="385" y="204" key="run.anything.popup/0.23.1440.852@0.23.1440.852" timestamp="1593718098870" />
+    <state x="385" y="199" key="search.everywhere.popup" timestamp="1593869775451">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="385" y="199" key="search.everywhere.popup/0.23.1440.852@0.23.1440.852" timestamp="1593869775451" />
+  </component>
+</project>
