@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyMacierze.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyPochodne.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyPochodne.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardCalki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HardCalki.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HardMacierze.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardPochodne.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HardPochodne.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediumCalki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MediumCalki.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediumMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MediumMacierze.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MediumPochodne.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MediumPochodne.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/ProblemGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Micros/micros/ProblemGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/ProblemVeryfier.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/micros/MicrosFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/micros/MicrosFront2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/micros/ProblemGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/micros/ProblemVeryfier.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,26 +157,26 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
-    <state width="1396" height="191" key="GridCell.Tab.0.bottom" timestamp="1593895929959">
-      <screen x="0" y="23" width="1440" height="852" />
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom" timestamp="1593898519016">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="153" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593706344878" />
-    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593895929959" />
-    <state width="1396" height="191" key="GridCell.Tab.0.center" timestamp="1593895929958">
-      <screen x="0" y="23" width="1440" height="852" />
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593898519016" />
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593898309730" />
+    <state width="1396" height="191" key="GridCell.Tab.0.center" timestamp="1593898519013">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="153" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593706344876" />
-    <state width="1396" height="191" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593895929958" />
-    <state width="1396" height="191" key="GridCell.Tab.0.left" timestamp="1593895929958">
-      <screen x="0" y="23" width="1440" height="852" />
+    <state width="1396" height="191" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593898519013" />
+    <state width="1396" height="191" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593898309727" />
+    <state width="1396" height="191" key="GridCell.Tab.0.left" timestamp="1593898519012">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="153" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593706344875" />
-    <state width="1396" height="191" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593895929958" />
-    <state width="1396" height="191" key="GridCell.Tab.0.right" timestamp="1593895929959">
-      <screen x="0" y="23" width="1440" height="852" />
+    <state width="1396" height="191" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593898519012" />
+    <state width="1396" height="191" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593898309726" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right" timestamp="1593898519014">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="153" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593706344877" />
-    <state width="1396" height="191" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593895929959" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593898519014" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593898309728" />
     <state width="1440" height="163" key="GridCell.Tab.1.bottom" timestamp="1593705910551">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

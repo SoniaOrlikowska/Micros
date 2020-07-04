@@ -7,19 +7,14 @@ import java.util.StringTokenizer;
 
 public class ProblemGenerator {
 
-    File easy;
     public  String tresc;
     public  String trescZadania;
     public  String trescOdpowiedzi;
-    public  String odpowiedzUzytkownika;
-    boolean  isequal;
-
     int linesCount;
 
 
-
+    //Generator zadania
     public  ProblemGenerator(File file, Path path) {
-       // easy = new File("Easy.txt");
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             linesCount = getLinesCount(file);
@@ -29,23 +24,21 @@ public class ProblemGenerator {
             String delim = ";";
             StringTokenizer stringT = new StringTokenizer(tresc, delim);
 
-            trescZadania = stringT.nextToken();
-            trescOdpowiedzi = stringT.nextToken();
+            trescZadania = stringT.nextToken();         //zmienna przechowujaca tresc zadania
+            trescOdpowiedzi = stringT.nextToken();      //zmienna przechowujaca tresc odpowiedzi
 
-            System.out.println("plik to: " + file + " Sciezka to : " + path);
             reader.close();
-
 
         } catch (IOException var5) {
             System.out.println(var5.getMessage());
         }
     }
-
+    //Metoda zliczająca linijki w pliku
     public int getLinesCount(File file) throws IOException {
 
         InputStream is = new BufferedInputStream(new FileInputStream(file));
         try {
-            byte[] c = new byte[1024];
+            byte[] c = new byte[1024]; //nie rozumiem tego
             int count = 0;
             int readChars = 0;
             boolean empty = true;
@@ -62,19 +55,5 @@ public class ProblemGenerator {
 
         }
          finally{is.close();}
-
-
-    }
-
-    public String getTresc() {
-        return tresc;
-    }
-
-    public String getTrescZadania() {
-        return trescZadania;
-    }
-
-    public String getTrescOdpowiedzi() {
-        return trescOdpowiedzi;
     }
 }

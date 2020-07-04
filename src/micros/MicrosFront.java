@@ -65,7 +65,7 @@ public class MicrosFront implements ActionListener {
         GridBagLayout gbl = new GridBagLayout();
         GridBagConstraints gbc = new GridBagConstraints();
         panel.setLayout(gbl);
-        panel.setBackground(Color.white);
+        //panel.setBackground(Color.white);
 
         // add components to panel
         JLabel wybierzPoziom = new JLabel("Wybierz poziom:");
@@ -193,6 +193,7 @@ public class MicrosFront implements ActionListener {
         clear.addActionListener(this);
         dziedzina.addActionListener(this);
 
+
     }
     //Metoda wyświetlająca zadanie do zrobienia
     public  String displayProblem() {
@@ -278,11 +279,15 @@ public class MicrosFront implements ActionListener {
         if(rozwiazanie.getText() != "" && sourceSumbit == submit) {
 
             if (rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                submit.setBackground(Color.GREEN);
-                System.out.println("MASZ TO " + rozwiazanie.getText());
+                panel.setBackground(new java.awt.Color(2, 255, 102, 255).brighter());
+
+
+
+
             }
             if (!rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                System.out.println("NIE MASZ TEGO!" + rozwiazanie.getText() + "tresc odpowiedzi byla: " + prawidlowaOdpowiedz);
+                JOptionPane.showMessageDialog(null, "Spróbuj jeszcze raz :)");
+        
             }
         }
 
