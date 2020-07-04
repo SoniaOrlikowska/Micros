@@ -1,4 +1,4 @@
-package mariusz;
+package draftyTesty;
 
 import java.util.StringTokenizer;
 
