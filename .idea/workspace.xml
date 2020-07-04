@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mariusz/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mariusz/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mariusz/Tokentest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/draftyTesty/Tokentest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyMacierze.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyPochodne.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyPochodne.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HardCalki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HardCalki.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HardMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HardMacierze.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HardPochodne.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HardPochodne.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediumCalki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MediumCalki.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediumMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MediumMacierze.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediumPochodne.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MediumPochodne.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/micros/MicrosFront.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,26 +156,30 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="458" y="203" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.852@0.23.1440.852" timestamp="1593814897330" />
-    <state width="1396" height="129" key="GridCell.Tab.0.bottom" timestamp="1593879614048">
+    <state x="353" y="51" key="CommitChangelistDialog2" timestamp="1593895910173">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom" timestamp="1593895929959">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="153" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593706344878" />
-    <state width="1396" height="129" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593879614048" />
-    <state width="1396" height="129" key="GridCell.Tab.0.center" timestamp="1593879614047">
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593895929959" />
+    <state width="1396" height="191" key="GridCell.Tab.0.center" timestamp="1593895929958">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="153" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593706344876" />
-    <state width="1396" height="129" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593879614047" />
-    <state width="1396" height="129" key="GridCell.Tab.0.left" timestamp="1593879614046">
+    <state width="1396" height="191" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593895929958" />
+    <state width="1396" height="191" key="GridCell.Tab.0.left" timestamp="1593895929958">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="153" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593706344875" />
-    <state width="1396" height="129" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593879614046" />
-    <state width="1396" height="129" key="GridCell.Tab.0.right" timestamp="1593879614048">
+    <state width="1396" height="191" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593895929958" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right" timestamp="1593895929959">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="153" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593706344877" />
-    <state width="1396" height="129" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593879614048" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593895929959" />
     <state width="1440" height="163" key="GridCell.Tab.1.bottom" timestamp="1593705910551">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -187,11 +196,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1440" height="163" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1593705910549" />
-    <state x="229" y="83" key="SettingsEditor" timestamp="1593869331979">
+    <state x="229" y="83" key="SettingsEditor" timestamp="1593890914797">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1593705958775" />
-    <state x="229" y="83" key="SettingsEditor/0.23.1440.852@0.23.1440.852" timestamp="1593869331979" />
+    <state x="229" y="83" key="SettingsEditor/0.23.1440.852@0.23.1440.852" timestamp="1593890914797" />
     <state x="399" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1593753054448">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -201,6 +210,10 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="389" y="95" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.852@0.23.1440.852" timestamp="1593717100656" />
+    <state x="509" y="373" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593895920526">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="509" y="373" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.852@0.23.1440.852" timestamp="1593895920526" />
     <state x="385" y="204" key="run.anything.popup" timestamp="1593718098870">
       <screen x="0" y="23" width="1440" height="852" />
     </state>

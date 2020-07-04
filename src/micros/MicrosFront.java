@@ -5,10 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.StringTokenizer;
 
 public class MicrosFront implements ActionListener {
 
@@ -24,10 +22,9 @@ public class MicrosFront implements ActionListener {
      JTextArea rozwiazanie = new JTextArea();
      JButton submit = new JButton("Sprawdź");
      JButton clear = new JButton("Wyczyść");
-     File file; //zmienna do przechowywania pliku z którego generowane jest zadanie
-     Path path; // zmienna przechowująca ścieżkę pliku file
-     boolean result = false; //zmienna przechowująca informacje o tym czy zadanie zostało dobrze rozwiązane
-     String prawidlowaOdpowiedz; //zmienna przechowująca wartość poprawnej odpowiedzi
+     File file;                                     //zmienna do przechowywania pliku z którego generowane jest zadanie
+     Path path;                                     // zmienna przechowująca ścieżkę pliku file
+     String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
 
     //Deklaracja wszystkich plikow
 
@@ -197,41 +194,34 @@ public class MicrosFront implements ActionListener {
         dziedzina.addActionListener(this);
 
     }
-    //Metoda wyświetlająca zadanie do zrobienia dziala tylko dla easyRadioButton
+    //Metoda wyświetlająca zadanie do zrobienia
     public  String displayProblem() {
 
-        if (easyRadio.isSelected() || mediumRadio.isSelected()) {
-
-            if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+        if (easyRadio.isSelected()) {
+            if (dziedzina.getSelectedIndex() == 0) {
                 file = easyCalki;
                 path = easyCalkiPath;
-            } else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+            } else if (dziedzina.getSelectedIndex() == 1) {
                 file = easyPochodne;
                 path = easyPochodnePath;
-            } else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+            } else if (dziedzina.getSelectedIndex() == 2) {
                 file = easyMatrix;
                 path = easyMatrixPath;
             }
-            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+        }
+        else if (mediumRadio.isSelected()) {
+            if (dziedzina.getSelectedIndex() == 0) {
                 file = mediumCalki;
                 path = mediumCalkiPath;
-            } else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+            } else if (dziedzina.getSelectedIndex() == 1) {
                 file = mediumPochodne;
                 path = mediumPochodnePath;
-            } else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+            } else if (dziedzina.getSelectedIndex() == 2) {
                 file = mediumMatrix;
                 path = mediumMatrixPath;
             }
         }
-            ProblemGenerator problemGenerator = new ProblemGenerator(file, path);
-            zadanie.setText(problemGenerator.trescZadania);
-            prawidlowaOdpowiedz = problemGenerator.trescOdpowiedzi;
-            return zadanie.getText();
-    }
-
-    public  String displayHardProblem() {
-
-    if (hardRadio.isSelected()) {
+        else if (hardRadio.isSelected()) {
             if (dziedzina.getSelectedIndex() == 0) {
                 file = hardCalki;
                 path = hardCalkiPath;
@@ -247,8 +237,8 @@ public class MicrosFront implements ActionListener {
         zadanie.setText(hardProblemGenerator.trescZadania);
         prawidlowaOdpowiedz = hardProblemGenerator.trescOdpowiedzi;
         return zadanie.getText();
-    }
 
+    }
 
     //Metoda wyświetlająca panel
     public JPanel getUI () {return panel; }
@@ -279,11 +269,11 @@ public class MicrosFront implements ActionListener {
         //MediumMatrix
         else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2  && sourceGeneruj == generuj) displayProblem();
         //HardCałki
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0  && sourceGeneruj == generuj) displayHardProblem();
+        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0  && sourceGeneruj == generuj) displayProblem();
         //HardPochodne
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1  && sourceGeneruj == generuj) displayHardProblem();
+        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1  && sourceGeneruj == generuj) displayProblem();
         //HardMatrix
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2  && sourceGeneruj == generuj) displayHardProblem();
+        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2  && sourceGeneruj == generuj) displayProblem();
 
         if(rozwiazanie.getText() != "" && sourceSumbit == submit) {
 
