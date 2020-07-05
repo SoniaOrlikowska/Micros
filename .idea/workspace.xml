@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scilab_forge_jlatexmath_1_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scilab_forge_jlatexmath_font_cyrillic_1_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scilab_forge_jlatexmath_font_greek_1_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/draftyTesty/Latex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/ProblemGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Micros/micros/ProblemGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/ProblemVeryfier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/micros/MicrosFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/micros/MicrosFront2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/micros/ProblemGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/micros/ProblemVeryfier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyCalki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyCalki.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Micros.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Micros.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Micros/draftyTesty/Tokentest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/MicrosFront.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Micros/micros/ProblemGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/draftyTesty/Tokentest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draftyTesty/Tokentest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/micros/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +37,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1dOAnacBZvBM8zEoC8orvOFkC57" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -47,12 +67,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="micros.Main" />
+    <configuration name="Latex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="draftyTesty.Latex" />
       <module name="Micros" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="micros.*" />
+          <option name="PATTERN" value="draftyTesty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -60,8 +80,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MicrosFront3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="micros.MicrosFront3" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="micros.Main" />
       <module name="Micros" />
       <extension name="coverage">
         <pattern>
@@ -115,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Latex" />
         <item itemvalue="Application.Tokentest" />
         <item itemvalue="Application.ProblemGenerator" />
         <item itemvalue="Application.panelsTest" />
-        <item itemvalue="Application.MicrosFront3" />
       </list>
     </recent_temporary>
   </component>
@@ -144,11 +164,15 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753939386" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1593875086274">
-      <screen x="0" y="23" width="1440" height="852" />
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1593953657796">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1593587853020" />
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1593953657796" />
     <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1593875086274" />
+    <state x="445" y="127" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1593951301537">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="445" y="127" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1440.900@0.0.1440.900" timestamp="1593951301537" />
     <state x="458" y="203" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1593814897330">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -157,26 +181,26 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
-    <state width="1396" height="191" key="GridCell.Tab.0.bottom" timestamp="1593898519016">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom" timestamp="1593960516141">
+      <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593898519016" />
-    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593898309730" />
-    <state width="1396" height="191" key="GridCell.Tab.0.center" timestamp="1593898519013">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593955976197" />
+    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593960516141" />
+    <state width="1396" height="191" key="GridCell.Tab.0.center" timestamp="1593960516138">
+      <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593898519013" />
-    <state width="1396" height="191" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593898309727" />
-    <state width="1396" height="191" key="GridCell.Tab.0.left" timestamp="1593898519012">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1396" height="191" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593955976194" />
+    <state width="1396" height="191" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593960516138" />
+    <state width="1396" height="191" key="GridCell.Tab.0.left" timestamp="1593960516137">
+      <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593898519012" />
-    <state width="1396" height="191" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593898309726" />
-    <state width="1396" height="191" key="GridCell.Tab.0.right" timestamp="1593898519014">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1396" height="191" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593955976192" />
+    <state width="1396" height="191" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593960516137" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right" timestamp="1593960516140">
+      <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593898519014" />
-    <state width="1396" height="191" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593898309728" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593955976195" />
+    <state width="1396" height="191" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593960516140" />
     <state width="1440" height="163" key="GridCell.Tab.1.bottom" timestamp="1593705910551">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -193,11 +217,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1440" height="163" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1593705910549" />
-    <state x="229" y="83" key="SettingsEditor" timestamp="1593890914797">
+    <state x="229" y="83" key="SettingsEditor" timestamp="1593959324591">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state x="229" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1593705958775" />
-    <state x="229" y="83" key="SettingsEditor/0.23.1440.852@0.23.1440.852" timestamp="1593890914797" />
+    <state x="229" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1593944563010" />
+    <state x="229" y="83" key="SettingsEditor/0.23.1440.852@0.23.1440.852" timestamp="1593959324591" />
     <state x="399" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1593753054448">
       <screen x="0" y="23" width="1440" height="852" />
     </state>

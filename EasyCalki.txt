@@ -1,6 +1,3 @@
-INT E5+5-1/7;1;
-INT E5+1-2/2;2;
-INT E5+1-3/2;3;
-INT E5+1-4/2;4;
-INT E5+1-5/2;5;
-INT E5+1-6/2;6;
+M_0=\sigma_0 \cdot T^1;1;
+M_0=\sigma_0 \cdot T^2;2;
+M_0=\sigma_0 \cdot T^3;3;

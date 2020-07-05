@@ -1,5 +1,7 @@
 package micros;
 
+import draftyTesty.Latex;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,6 +13,7 @@ public class ProblemGenerator {
     public  String trescZadania;
     public  String trescOdpowiedzi;
     int linesCount;
+
 
 
     //Generator zadania
@@ -25,6 +28,8 @@ public class ProblemGenerator {
             StringTokenizer stringT = new StringTokenizer(tresc, delim);
 
             trescZadania = stringT.nextToken();         //zmienna przechowujaca tresc zadania
+            System.out.println("Zmieniłem wartość treść zadania na : " + trescZadania);
+            latexGenerator();
             trescOdpowiedzi = stringT.nextToken();      //zmienna przechowujaca tresc odpowiedzi
 
             reader.close();
@@ -32,6 +37,9 @@ public class ProblemGenerator {
         } catch (IOException var5) {
             System.out.println(var5.getMessage());
         }
+    }
+    public void latexGenerator(){
+        Latex.renderLatex(trescZadania);
     }
     //Metoda zliczająca linijki w pliku
     public int getLinesCount(File file) throws IOException {

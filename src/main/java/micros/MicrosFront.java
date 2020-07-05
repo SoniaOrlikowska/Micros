@@ -1,5 +1,7 @@
 package micros;
 
+import com.sun.javafx.tools.ant.Info;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -25,6 +27,8 @@ public class MicrosFront implements ActionListener {
      File file;                                     //zmienna do przechowywania pliku z którego generowane jest zadanie
      Path path;                                     // zmienna przechowująca ścieżkę pliku file
      String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
+
+    Icon icon = new ImageIcon("Example5.png");
 
     //Deklaracja wszystkich plikow
 
@@ -234,9 +238,13 @@ public class MicrosFront implements ActionListener {
                 path = hardMatrixPath;
             }
         }
-        ProblemGenerator hardProblemGenerator = new ProblemGenerator(file, path);
-        zadanie.setText(hardProblemGenerator.trescZadania);
-        prawidlowaOdpowiedz = hardProblemGenerator.trescOdpowiedzi;
+        ProblemGenerator problemGenerator = new ProblemGenerator(file, path);
+        //todo dopisz coś
+        zadanie.repaint();
+        System.out.println("repaint");
+        zadanie.setIcon(icon);
+        zadanie.setText(problemGenerator.trescZadania);
+        prawidlowaOdpowiedz = problemGenerator.trescOdpowiedzi;
         return zadanie.getText();
 
     }
@@ -281,15 +289,14 @@ public class MicrosFront implements ActionListener {
             if (rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
                 panel.setBackground(new java.awt.Color(2, 255, 102, 255).brighter());
 
-
-
-
             }
             if (!rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
                 JOptionPane.showMessageDialog(null, "Spróbuj jeszcze raz :)");
-        
+
             }
         }
+
+
 
     }
 }
