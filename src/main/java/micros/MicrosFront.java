@@ -5,32 +5,34 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Optional;
 
 public class MicrosFront implements ActionListener {
-
-     JPanel panel = new JPanel();
+//todo moze zrobic pierwszy panel logowanie do pofilu, druga karta profil z liczba uzyskanych punktow(sprawdzanie czy dane zadanie nie bylo juz rozwiazane), 3 karta zadanie, no i dorobic wskazowki
+//todo Podpowiedz button zamienic na sprawdz, sprawdz na zapisz i dodac powyzej ikonke zaroweczki jako hint
+    JPanel panel = new JPanel();
+    JLabel wybierzPoziom = new JLabel("Wybierz poziom:");
      JRadioButton easyRadio = new JRadioButton("Easy");
      JRadioButton mediumRadio = new JRadioButton("Medium");
      JRadioButton hardRadio = new JRadioButton("Hard");
      String dziedziny[] = {"Całki", "Pochodne", "Macierze"};
      JComboBox dziedzina = new JComboBox(dziedziny);
      JButton generuj = new JButton("Generuj");
-     JLabel zadanie = new JLabel();
+     JLabel zadanie = new JLabel( );
      JLabel twojeRozwiazanieLabel = new JLabel("Odpowiedź:");
-     JTextArea rozwiazanie = new JTextArea();
+     JTextArea rozwiazanie = new JTextArea(3,4);
      JButton submit = new JButton("Sprawdź");
+    JButton save = new JButton("Zapisz wynik");
      JButton clear = new JButton("Wyczyść");
      File file;                                     //zmienna do przechowywania pliku z którego generowane jest zadanie
      Path path;                                     // zmienna przechowująca ścieżkę pliku file
      String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
-    String absoluteIconPath = "/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources";
+     String absoluteIconPath = "/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources";
+     ImageIcon blednaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/wrong.png");
+     ImageIcon poprawnaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/correct.png");
 
 
     //Deklaracja wszystkich plikow
@@ -72,10 +74,11 @@ public class MicrosFront implements ActionListener {
         GridBagLayout gbl = new GridBagLayout();
         GridBagConstraints gbc = new GridBagConstraints();
         panel.setLayout(gbl);
-        //panel.setBackground(Color.white);
+        panel.setBackground(Color.white);
+
 
         // add components to panel
-        JLabel wybierzPoziom = new JLabel("Wybierz poziom:");
+
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -85,25 +88,25 @@ public class MicrosFront implements ActionListener {
 
         //RadioButton Easy
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.insets = new Insets(0,60,0,0);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.insets = new Insets(10,20,0,0);
         gbc.weightx = 1;
         panel.add(easyRadio,gbc);
 
         //RadioButton Medium
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 2;
-        gbc.gridy = 0;
-        gbc.insets = new Insets(0,15,0,0);
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.insets = new Insets(10,10,0,0);
         gbc.weightx = 1;
         panel.add(mediumRadio,gbc);
 
         //RadioButton Hard
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 3;
-        gbc.gridy = 0;
-        gbc.insets = new Insets(0,0,0,10);
+        gbc.gridx = 2;
+        gbc.gridy = 1;
+        gbc.insets = new Insets(10,20,0,30);
         gbc.weightx = 1;
         panel.add(hardRadio,gbc);
 
@@ -117,41 +120,43 @@ public class MicrosFront implements ActionListener {
         JLabel wybierzDziedzine = new JLabel("Wybierz dziedzinę:");
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.insets = new Insets(10,10,0,0);
         gbc.weightx = 1;
         panel.add(wybierzDziedzine,gbc);
 
         //JCombobox Dziedzina
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 1;
-        gbc.gridy = 1;
+        gbc.gridwidth = 2;
+        gbc.gridx = 0;
+        gbc.gridy = 3;
         gbc.insets = new Insets(10,10,0,0);
         gbc.weightx = 1;
         panel.add(dziedzina,gbc);
 
         //Generuj JButton
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridwidth = 1;
+       // gbc.gridwidth = 1;
         gbc.gridx = 2;
-        gbc.gridy = 1;
-        gbc.insets = new Insets(5, 10, 0, 10);
+        gbc.gridy = 3;
+        gbc.insets = new Insets(10, 10, 0, 20);
         gbc.weightx = 1;
         panel.add(generuj, gbc);
 
         // tresc zadania
         gbc.fill = GridBagConstraints.BOTH;
-        gbc.gridwidth = 4;
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        gbc.insets = new Insets(10,20,0,10);
+        //gbc.gridwidth = 4;
+        gbc.gridx = 0;
+        gbc.gridy = 4;
+        gbc.insets = new Insets(15,20,10,10);
         gbc.weightx = 1;
         panel.add(zadanie, gbc);
+        zadanie.setPreferredSize(new Dimension(100,90));
 
         //JLabel rozwiązanie
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
-        gbc.gridy = 3;
+        gbc.gridy = 5;
         gbc.insets = new Insets(10,10,0,0);
         gbc.weightx = 1;
         panel.add(twojeRozwiazanieLabel,gbc);
@@ -159,37 +164,39 @@ public class MicrosFront implements ActionListener {
         //JTextArea Rozwiązanie
         gbc.fill = GridBagConstraints.BOTH;
         gbc.gridwidth = 4;
+        gbc.gridheight = 1;
         gbc.gridx = 0;
-        gbc.gridy = 4;
+        gbc.gridy = 6;
         gbc.insets = new Insets(10,10,0,10);
         gbc.weightx = 1;
         panel.add(rozwiazanie, gbc);
+        rozwiazanie.setBorder(BorderFactory.createEtchedBorder());
 
        //Clear JButton
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 1;
         gbc.gridx = 0;
-        gbc.gridy = 5;
-        gbc.insets = new Insets(10,10,0,0);
+        gbc.gridy = 8;
+        gbc.insets = new Insets(10,20,10,0);
         gbc.weightx = 1;
         panel.add(clear,gbc);
 
-        JButton hint = new JButton("Podpowiedź");
+
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 1;
         gbc.gridx = 1;
-        gbc.gridy = 5;
-        gbc.insets = new Insets(10,10,0,0);
+        gbc.gridy = 8;
+        gbc.insets = new Insets(10,10,10,0);
         gbc.weightx = 1;
-        panel.add(hint,gbc);
+        panel.add(submit,gbc);
 
         //JButton Sprawdz
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
-        gbc.gridy = 5;
-        gbc.insets = new Insets(10,10,0,0);
+        gbc.gridy = 8;
+        gbc.insets = new Insets(10,10,10,20);
         gbc.weightx = 1;
-        panel.add(submit,gbc);
+        panel.add(save,gbc);
 
         //ActionListners
         easyRadio.addActionListener( this);
@@ -321,6 +328,7 @@ public class MicrosFront implements ActionListener {
         //deklarcja sourceGeneruj dla generuj Button i sourceSumbit dla submitButton
         Object sourceGeneruj = e.getSource();
         Object sourceSumbit = e.getSource();
+        Object sourceClear = e.getSource();
 
         //EasyCałki
         if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 0   && sourceGeneruj == generuj) displayProblem();
@@ -341,16 +349,23 @@ public class MicrosFront implements ActionListener {
         //HardMatrix
         else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2  && sourceGeneruj == generuj) displayProblem();
 
-        if(rozwiazanie.getText() != "" && sourceSumbit == submit) {
+        if(!(zadanie == null) && !rozwiazanie.getText().equals("") && sourceSumbit == submit) {
 
             if (rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                panel.setBackground(new java.awt.Color(2, 255, 102, 255).brighter());
+                JOptionPane.showMessageDialog(null, "Poprawna odpowiedź", "Poprawna odpowiedź!",JOptionPane.INFORMATION_MESSAGE, poprawnaIcon);
 
             }
             if (!rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                JOptionPane.showMessageDialog(null, "Spróbuj jeszcze raz :)");
+                JOptionPane.showMessageDialog(null, "Spróbuj jeszcze raz", "Błędna odpowiedż",JOptionPane.INFORMATION_MESSAGE,blednaIcon);
+
 
             }
+        }
+
+        if(sourceClear == clear){
+
+            zadanie.setIcon(null);
+            rozwiazanie.setText(" ");
         }
 
 

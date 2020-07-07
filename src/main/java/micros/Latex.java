@@ -1,4 +1,4 @@
-package draftyTesty;
+package micros;
 
 import org.scilab.forge.jlatexmath.TeXConstants;
 import org.scilab.forge.jlatexmath.TeXFormula;

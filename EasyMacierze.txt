@@ -1,6 +1,1 @@
-MATRIX E5+5-1/7;MATRIX E ODP 1;
-MATRIX E5+1-2/2;MATRIX E ODP 2;
-MATRIX E5+1-3/2;MATRIX E ODP 3;
-MATRIX E5+1-3/2;MATRIX E ODP 4;
-MATRIX E5+1-3/2;MATRIX E ODP 5;
-MATRIX E5+1-9/2;MATRIX E ODP 6;
+det A = \begin{bmatrix} 1/a & b & c \\c & 2/d & d\\e & 3/f & g \\\end{bmatrix};jhj;

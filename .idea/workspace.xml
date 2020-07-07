@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/micros/MyButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draftyTesty/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draftyTesty/Latex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyMacierze.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/draftyTesty/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Latex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Example5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Example5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/draftyTesty/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draftyTesty/Latex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/draftyTesty/Latex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFront$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFront.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" afterDir="false" />
     </list>
@@ -53,17 +57,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="micros" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="micros" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Latex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="draftyTesty.Latex" />
+      <option name="MAIN_CLASS_NAME" value="micros.Latex" />
       <module name="Micros" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="draftyTesty.*" />
+          <option name="PATTERN" value="micros.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,7 +109,7 @@
       <module name="Micros" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="draftyTesty.*" />
+          <option name="PATTERN" value="micros.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,10 +161,18 @@
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1593953657796" />
     <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1593966063853" />
+    <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594152632571">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.852@0.23.1440.852" timestamp="1594152632571" />
     <state x="445" y="127" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1593951301537">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="445" y="127" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1440.900@0.0.1440.900" timestamp="1593951301537" />
+    <state x="494" y="315" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594152634397">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="494" y="315" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.852@0.23.1440.852" timestamp="1594152634397" />
     <state x="458" y="203" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1593814897330">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -166,26 +181,26 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
-    <state width="1396" height="178" key="GridCell.Tab.0.bottom" timestamp="1593973215155">
+    <state width="1396" height="68" key="GridCell.Tab.0.bottom" timestamp="1594158143872">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593955976197" />
-    <state width="1396" height="178" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1593973215155" />
-    <state width="1396" height="178" key="GridCell.Tab.0.center" timestamp="1593973215154">
+    <state width="1396" height="68" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1594158143872" />
+    <state width="1396" height="68" key="GridCell.Tab.0.center" timestamp="1594158143870">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="191" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593955976194" />
-    <state width="1396" height="178" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1593973215154" />
-    <state width="1396" height="178" key="GridCell.Tab.0.left" timestamp="1593973215153">
+    <state width="1396" height="68" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1594158143870" />
+    <state width="1396" height="68" key="GridCell.Tab.0.left" timestamp="1594158143868">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="191" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593955976192" />
-    <state width="1396" height="178" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1593973215153" />
-    <state width="1396" height="178" key="GridCell.Tab.0.right" timestamp="1593973215154">
+    <state width="1396" height="68" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1594158143868" />
+    <state width="1396" height="68" key="GridCell.Tab.0.right" timestamp="1594158143871">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="191" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593955976195" />
-    <state width="1396" height="178" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1593973215154" />
+    <state width="1396" height="68" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1594158143871" />
     <state width="1440" height="163" key="GridCell.Tab.1.bottom" timestamp="1593705910551">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -220,10 +235,10 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="389" y="95" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.852@0.23.1440.852" timestamp="1593717100656" />
-    <state x="509" y="373" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593895920526">
+    <state x="509" y="373" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594158184147">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state x="509" y="373" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.852@0.23.1440.852" timestamp="1593895920526" />
+    <state x="509" y="373" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.852@0.23.1440.852" timestamp="1594158184147" />
     <state x="458" y="209" key="extract.method.dialog" timestamp="1593973159416">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
