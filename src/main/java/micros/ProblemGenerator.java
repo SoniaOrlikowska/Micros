@@ -2,6 +2,7 @@ package micros;
 
 import draftyTesty.Latex;
 
+import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,19 +10,18 @@ import java.util.StringTokenizer;
 
 public class ProblemGenerator {
 
-    public  String tresc;
-    public  String trescZadania;
-    public  String trescOdpowiedzi;
+    public String tresc;
+    public String trescZadania;
+    public String trescOdpowiedzi;
     int linesCount;
 
 
-
     //Generator zadania
-    public  ProblemGenerator(File file, Path path) {
+    public ProblemGenerator(File file, Path path) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             linesCount = getLinesCount(file);
-            int wylosowaneZadanie = (int) (Math.random()*linesCount);
+            int wylosowaneZadanie = (int) (Math.random() * linesCount);
             tresc = Files.readAllLines(path).get(wylosowaneZadanie);
 
             String delim = ";";
@@ -38,9 +38,13 @@ public class ProblemGenerator {
             System.out.println(var5.getMessage());
         }
     }
-    public void latexGenerator(){
+
+    public void latexGenerator() throws IOException {
         Latex.renderLatex(trescZadania);
     }
+
+
+
     //Metoda zliczająca linijki w pliku
     public int getLinesCount(File file) throws IOException {
 
@@ -61,7 +65,8 @@ public class ProblemGenerator {
             }
             return (count == 0 && !empty) ? 1 : count;
 
+        } finally {
+            is.close();
         }
-         finally{is.close();}
     }
 }

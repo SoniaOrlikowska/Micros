@@ -1,14 +1,17 @@
 package micros;
 
-import com.sun.javafx.tools.ant.Info;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Optional;
 
 public class MicrosFront implements ActionListener {
 
@@ -27,8 +30,8 @@ public class MicrosFront implements ActionListener {
      File file;                                     //zmienna do przechowywania pliku z którego generowane jest zadanie
      Path path;                                     // zmienna przechowująca ścieżkę pliku file
      String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
+    String absoluteIconPath = "/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources";
 
-    Icon icon = new ImageIcon("Example5.png");
 
     //Deklaracja wszystkich plikow
 
@@ -200,7 +203,7 @@ public class MicrosFront implements ActionListener {
 
     }
     //Metoda wyświetlająca zadanie do zrobienia
-    public  String displayProblem() {
+    public  String displayProblem()  {
 
         if (easyRadio.isSelected()) {
             if (dziedzina.getSelectedIndex() == 0) {
@@ -239,14 +242,68 @@ public class MicrosFront implements ActionListener {
             }
         }
         ProblemGenerator problemGenerator = new ProblemGenerator(file, path);
-        //todo dopisz coś
-        zadanie.repaint();
-        System.out.println("repaint");
-        zadanie.setIcon(icon);
-        zadanie.setText(problemGenerator.trescZadania);
+        /////////////////
+
+        File file = new File("/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources/");
+        File[] files = file.listFiles();
+        Arrays.sort(files, new Comparator<File>() {
+            @Override
+            public int compare(File o1, File o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+        for (File file1 : files) {
+
+            System.out.print(file1.getName() + " ");
+        }
+        System.out.println();
+
+        String name ="";
+
+            if (files != null)
+                name = files[files.length - 1].getPath();
+
+
+        System.out.println(name);
+
+        ///////////////
+
+        /*Path dir = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources/");  // specify your directory
+        Optional<Path> lastFilePath = null;  // finally get the last file using simple comparator by lastModified field
+        try {
+            lastFilePath = Files.list(dir)    // here we get the stream with full directory listing
+                    .filter(f -> !Files.isDirectory(f))  // exclude subdirectories from listing
+                    .max(Comparator.comparingLong(f -> f.toFile().lastModified()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if ( lastFilePath.isPresent() ) // your folder may be empty
+        {
+            System.out.println(lastFilePath);
+          //todo tu powinna byc nazwa pliku a nie sciezka do niego
+            // do your code here, lastFilePath contains all you need
+        }*/
+        zadanie.setIcon(null);
+        panel.repaint();
+        zadanie.setIcon(new ImageIcon(name));
+        panel.repaint();
+
+        deleteFiles(files);
+
+        //zadanie.setText(problemGenerator.trescZadania);
         prawidlowaOdpowiedz = problemGenerator.trescOdpowiedzi;
+
+
         return zadanie.getText();
 
+    }
+
+    private void deleteFiles(File[] files) {
+        for (File file1 : files) {
+
+            file1.delete();
+        }
     }
 
     //Metoda wyświetlająca panel
