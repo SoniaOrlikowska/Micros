@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/micros/MyButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hint.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyMacierze.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyMacierze.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draftyTesty/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Latex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Latex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/draftyTesty/Latex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Latex.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFront$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFront.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,19 +33,22 @@
     </option>
   </component>
   <component name="ProjectId" id="1dOAnacBZvBM8zEoC8orvOFkC57" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -62,6 +59,10 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="micros" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -147,20 +148,27 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="404" y="126" key="#Main_(1)" timestamp="1593753125356">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="404" y="126" key="#Main_(1)/0.23.1440.852@0.23.1440.852" timestamp="1593753125356" />
+    <state x="320" y="114" key="#Project_Structure" timestamp="1594188715215">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="320" y="114" key="#Project_Structure/0.23.1440.852@0.23.1440.852" timestamp="1594188715214" />
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1593753939386">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753939386" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1593966063853">
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1594187409792">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1593953657796" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1593966063853" />
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1594187409792" />
     <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594152632571">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -181,26 +189,26 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
-    <state width="1396" height="68" key="GridCell.Tab.0.bottom" timestamp="1594158143872">
+    <state width="1396" height="68" key="GridCell.Tab.0.bottom" timestamp="1594193404182">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1593955976197" />
-    <state width="1396" height="68" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1594158143872" />
-    <state width="1396" height="68" key="GridCell.Tab.0.center" timestamp="1594158143870">
+    <state width="1396" height="68" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1594185605217" />
+    <state width="1396" height="68" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1594193404182" />
+    <state width="1396" height="68" key="GridCell.Tab.0.center" timestamp="1594193404181">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1593955976194" />
-    <state width="1396" height="68" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1594158143870" />
-    <state width="1396" height="68" key="GridCell.Tab.0.left" timestamp="1594158143868">
+    <state width="1396" height="68" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1594185605215" />
+    <state width="1396" height="68" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1594193404181" />
+    <state width="1396" height="68" key="GridCell.Tab.0.left" timestamp="1594193404180">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1593955976192" />
-    <state width="1396" height="68" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1594158143868" />
-    <state width="1396" height="68" key="GridCell.Tab.0.right" timestamp="1594158143871">
+    <state width="1396" height="68" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1594185605214" />
+    <state width="1396" height="68" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1594193404180" />
+    <state width="1396" height="68" key="GridCell.Tab.0.right" timestamp="1594193404181">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state width="1396" height="191" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1593955976195" />
-    <state width="1396" height="68" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1594158143871" />
+    <state width="1396" height="68" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1594185605216" />
+    <state width="1396" height="68" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1594193404181" />
     <state width="1440" height="163" key="GridCell.Tab.1.bottom" timestamp="1593705910551">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
