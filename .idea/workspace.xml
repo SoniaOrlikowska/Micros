@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/micros/CardsLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/micros/LogFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/woman.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Latex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Latex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFront$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFront$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFront.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,8 +71,21 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Latex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="micros.Latex" />
+    <configuration name="CardsLayout" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="micros.CardsLayout" />
+      <module name="Micros" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="micros.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogFront" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="micros.LogFront" />
       <module name="Micros" />
       <extension name="coverage">
         <pattern>
@@ -92,35 +110,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProblemGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="micros.ProblemGenerator" />
-      <module name="Micros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="micros.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="CardLayout" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CardLayout" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tokentest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="draftyTesty.Tokentest" />
-      <module name="Micros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="micros.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="scratch" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+    <configuration name="CardLayoutExample" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CardLayoutExample" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,10 +127,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Java Scratch.scratch" />
-        <item itemvalue="Application.Latex" />
-        <item itemvalue="Application.Tokentest" />
-        <item itemvalue="Application.ProblemGenerator" />
+        <item itemvalue="Application.CardsLayout" />
+        <item itemvalue="Application.LogFront" />
+        <item itemvalue="Java Scratch.CardLayoutExample" />
+        <item itemvalue="Java Scratch.CardLayout" />
       </list>
     </recent_temporary>
   </component>
@@ -152,6 +151,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="113" key="#CardLayoutExample" timestamp="1594240931711">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="413" y="113" key="#CardLayoutExample/0.23.1440.852@0.23.1440.852" timestamp="1594240931711" />
     <state x="404" y="126" key="#Main_(1)" timestamp="1593753125356">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -164,23 +167,23 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753939386" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1594187409792">
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1594324413759">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1593953657796" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1594187409792" />
-    <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594152632571">
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1594324413759" />
+    <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594315173847">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.852@0.23.1440.852" timestamp="1594152632571" />
+    <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.852@0.23.1440.852" timestamp="1594315173847" />
     <state x="445" y="127" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1593951301537">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="445" y="127" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1440.900@0.0.1440.900" timestamp="1593951301537" />
-    <state x="494" y="315" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594152634397">
+    <state x="494" y="315" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594315175549">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
-    <state x="494" y="315" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.852@0.23.1440.852" timestamp="1594152634397" />
+    <state x="494" y="315" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.852@0.23.1440.852" timestamp="1594315175549" />
     <state x="458" y="203" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1593814897330">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -189,26 +192,26 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
-    <state width="1396" height="68" key="GridCell.Tab.0.bottom" timestamp="1594193404182">
+    <state width="1396" height="48" key="GridCell.Tab.0.bottom" timestamp="1594325576037">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="68" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1594185605217" />
-    <state width="1396" height="68" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1594193404182" />
-    <state width="1396" height="68" key="GridCell.Tab.0.center" timestamp="1594193404181">
+    <state width="1396" height="48" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1594325576037" />
+    <state width="1396" height="48" key="GridCell.Tab.0.center" timestamp="1594325576034">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="68" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1594185605215" />
-    <state width="1396" height="68" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1594193404181" />
-    <state width="1396" height="68" key="GridCell.Tab.0.left" timestamp="1594193404180">
+    <state width="1396" height="48" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1594325576034" />
+    <state width="1396" height="48" key="GridCell.Tab.0.left" timestamp="1594325576033">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="68" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1594185605214" />
-    <state width="1396" height="68" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1594193404180" />
-    <state width="1396" height="68" key="GridCell.Tab.0.right" timestamp="1594193404181">
+    <state width="1396" height="48" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1594325576033" />
+    <state width="1396" height="48" key="GridCell.Tab.0.right" timestamp="1594325576035">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="1396" height="68" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1594185605216" />
-    <state width="1396" height="68" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1594193404181" />
+    <state width="1396" height="48" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1594325576035" />
     <state width="1440" height="163" key="GridCell.Tab.1.bottom" timestamp="1593705910551">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

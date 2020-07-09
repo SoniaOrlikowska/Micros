@@ -1,6 +1,7 @@
 package micros;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
@@ -12,8 +13,10 @@ import java.util.Comparator;
 public class MicrosFront implements ActionListener {
     //todo moze zrobic pierwszy panel logowanie do pofilu, druga karta profil z liczba uzyskanych punktow(sprawdzanie czy dane zadanie nie bylo juz rozwiazane), 3 karta zadanie, no i dorobic wskazowki
 
+
+    JPanel microsPanel = new JPanel();
     //Deklaracja wszystkich komponentów
-    JPanel panel = new JPanel();
+
     JLabel wybierzPoziom = new JLabel("Wybierz poziom:");
     JRadioButton easyRadio = new JRadioButton("Easy");
     JRadioButton mediumRadio = new JRadioButton("Medium");
@@ -29,12 +32,17 @@ public class MicrosFront implements ActionListener {
     JButton submit = new JButton("Sprawdź");
     JButton save = new JButton("Zapisz wynik");
     JButton clear = new JButton("Wyczyść");
+
     File file;                                     //zmienna do przechowywania pliku z którego generowane jest zadanie
     Path path;                                     // zmienna przechowująca ścieżkę pliku file
+
     String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
+
     ImageIcon blednaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/wrong.png");
     ImageIcon poprawnaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/correct.png");
     ImageIcon hintIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/hint.png");
+    ImageIcon back = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/back.png");
+    ImageIcon woman = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
 
 
     //Deklaracja wszystkich plikow
@@ -72,11 +80,12 @@ public class MicrosFront implements ActionListener {
     //Layout setup
     public MicrosFront() {
 
+
         // set panel layout and look
         GridBagLayout gbl = new GridBagLayout();
         GridBagConstraints gbc = new GridBagConstraints();
-        panel.setLayout(gbl);
-        panel.setBackground(Color.white);
+        microsPanel.setLayout(gbl);
+        microsPanel.setBackground(Color.white);
 
 
         // Add components to panel
@@ -86,7 +95,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 0;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        panel.add(wybierzPoziom, gbc);
+        microsPanel.add(wybierzPoziom, gbc);
 
         //RadioButton Easy
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -94,7 +103,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 1;
         gbc.insets = new Insets(10, 20, 0, 0);
         gbc.weightx = 1;
-        panel.add(easyRadio, gbc);
+        microsPanel.add(easyRadio, gbc);
 
         //RadioButton Medium
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -102,7 +111,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 1;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        panel.add(mediumRadio, gbc);
+        microsPanel.add(mediumRadio, gbc);
 
         //RadioButton Hard
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -110,7 +119,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 1;
         gbc.insets = new Insets(10, 20, 0, 30);
         gbc.weightx = 1;
-        panel.add(hardRadio, gbc);
+        microsPanel.add(hardRadio, gbc);
 
         //Set Radio Buttons in group
         ButtonGroup radioButtonsGroup = new ButtonGroup();
@@ -124,7 +133,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 2;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        panel.add(wybierzDziedzine, gbc);
+        microsPanel.add(wybierzDziedzine, gbc);
 
         //JCombobox Dziedzina
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -133,7 +142,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 3;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        panel.add(dziedzina, gbc);
+        microsPanel.add(dziedzina, gbc);
 
         //Generuj JButton
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -141,7 +150,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 3;
         gbc.insets = new Insets(10, 10, 0, 20);
         gbc.weightx = 1;
-        panel.add(generuj, gbc);
+        microsPanel.add(generuj, gbc);
 
         //JLabel tresc zadania
         gbc.fill = GridBagConstraints.BOTH;
@@ -150,7 +159,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 4;
         gbc.insets = new Insets(15, 20, 10, 10);
         gbc.weightx = 1;
-        panel.add(zadanie, gbc);
+        microsPanel.add(zadanie, gbc);
         zadanie.setPreferredSize(new Dimension(100, 90));
 
         //JLabel rozwiązanie
@@ -159,7 +168,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 5;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        panel.add(twojeRozwiazanieLabel, gbc);
+        microsPanel.add(twojeRozwiazanieLabel, gbc);
 
         //JLabel hint
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -167,7 +176,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 5;
         gbc.insets = new Insets(10, 100, 5, 10);
         gbc.weightx = 1;
-        panel.add(hint, gbc);
+        microsPanel.add(hint, gbc);
         hint.setIcon(hintIcon);
 
         //JTextArea Rozwiązanie
@@ -178,7 +187,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 6;
         gbc.insets = new Insets(10, 10, 0, 10);
         gbc.weightx = 1;
-        panel.add(rozwiazanie, gbc);
+        microsPanel.add(rozwiazanie, gbc);
         rozwiazanie.setBorder(BorderFactory.createEtchedBorder());
 
         //Clear JButton
@@ -188,7 +197,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 8;
         gbc.insets = new Insets(10, 20, 10, 0);
         gbc.weightx = 1;
-        panel.add(clear, gbc);
+        microsPanel.add(clear, gbc);
 
         //JButton Sprawdz
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -197,7 +206,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 8;
         gbc.insets = new Insets(10, 10, 10, 0);
         gbc.weightx = 1;
-        panel.add(submit, gbc);
+        microsPanel.add(submit, gbc);
 
         //JButton Zapisz
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -205,7 +214,7 @@ public class MicrosFront implements ActionListener {
         gbc.gridy = 8;
         gbc.insets = new Insets(10, 10, 10, 20);
         gbc.weightx = 1;
-        panel.add(save, gbc);
+        microsPanel.add(save, gbc);
 
         //ActionListners
         easyRadio.addActionListener(this);
@@ -295,7 +304,7 @@ public class MicrosFront implements ActionListener {
     //Metoda wyświetlająca panel
 
     public JPanel getUI() {
-        return panel;
+        return microsPanel;
     }
 
     //Metoda zwracająca wartość wpisanego rozwiązania
@@ -309,6 +318,8 @@ public class MicrosFront implements ActionListener {
     public void setPrawidlowaOdpowiedz(String prawidlowaOdpowiedz) {
         this.prawidlowaOdpowiedz = prawidlowaOdpowiedz;
     }
+
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
