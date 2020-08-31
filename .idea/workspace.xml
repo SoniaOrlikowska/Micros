@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/micros/LoginValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/ProfileFront.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/SignFront.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Micros.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Micros.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micros.png" beforeDir="false" afterPath="$PROJECT_DIR$/micros.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draftyTesty/CardLay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draftyTesty/CardLay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draftyTesty/CardTesty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draftyTesty/CardTesty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draftyTesty/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draftyTesty/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draftyTesty/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draftyTesty/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/CardsLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/CardsLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/DataBaseConnectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/DataBaseConnectivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/LogFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/LogFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/MicrosFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/MyButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/SignFront.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/LogFront.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFront.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/MyButton$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/MyButton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/LoginValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/LoginValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/LogFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/LogFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/LoginValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/LoginValidation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/LogFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/LogFront.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,11 +173,11 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753939386" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1598858298764">
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1598905873043">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1595361625396" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1598858298764" />
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1598905873043" />
     <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594315173847">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -233,26 +206,26 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
-    <state width="1396" height="2" key="GridCell.Tab.0.bottom" timestamp="1598858735729">
+    <state width="1396" height="91" key="GridCell.Tab.0.bottom" timestamp="1598906713748">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598377999916" />
-    <state width="1396" height="2" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1598858735729" />
-    <state width="1396" height="2" key="GridCell.Tab.0.center" timestamp="1598858735728">
+    <state width="1396" height="91" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1598906713748" />
+    <state width="1396" height="91" key="GridCell.Tab.0.center" timestamp="1598906713746">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598377999913" />
-    <state width="1396" height="2" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1598858735728" />
-    <state width="1396" height="2" key="GridCell.Tab.0.left" timestamp="1598858735727">
+    <state width="1396" height="91" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1598906713746" />
+    <state width="1396" height="91" key="GridCell.Tab.0.left" timestamp="1598906713746">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598377999911" />
-    <state width="1396" height="2" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1598858735727" />
-    <state width="1396" height="2" key="GridCell.Tab.0.right" timestamp="1598858735729">
+    <state width="1396" height="91" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1598906713746" />
+    <state width="1396" height="91" key="GridCell.Tab.0.right" timestamp="1598906713747">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598377999915" />
-    <state width="1396" height="2" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1598858735729" />
+    <state width="1396" height="91" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1598906713747" />
     <state width="1396" height="131" key="GridCell.Tab.1.bottom" timestamp="1598079806937">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -307,6 +280,10 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="149" y="146" key="new project wizard/0.23.1440.852@0.23.1440.852" timestamp="1598593747816" />
+    <state x="482" y="72" key="refactoring.ChangeSignatureDialog" timestamp="1598896417755">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="482" y="72" key="refactoring.ChangeSignatureDialog/0.23.1440.852@0.23.1440.852" timestamp="1598896417755" />
     <state x="385" y="204" key="run.anything.popup" timestamp="1598463340325">
       <screen x="0" y="23" width="1440" height="852" />
     </state>

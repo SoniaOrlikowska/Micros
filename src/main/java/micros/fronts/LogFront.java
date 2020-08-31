@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class LogFront  {
+public class LogFront {
 
     JPanel logPanel = new JPanel();
     JLabel username = new JLabel("Login:");
@@ -21,6 +21,14 @@ public class LogFront  {
     JButton login = new JButton("Login");
     JLabel signIn = new JLabel("Click here to create new account");
 
+    public String LogFront(JTextField usernameField, JPasswordField passwordField){
+        this.usernameField = usernameField;
+        this.passwordField = passwordField;
+        String userName = username.getText();
+        return userName;
+        //this.passwordField = passwordField;
+
+    }
 
     public LogFront() {
 
@@ -80,10 +88,9 @@ public class LogFront  {
         logPanel.add(signIn, gridBagConstraints);
         signIn.setForeground(Color.BLUE);
 
-        ActionListener logFrontListner = new LoginValidation(login,cancel);
-        login.addActionListener(logFrontListner);
-        cancel.addActionListener(logFrontListner);
-
+        LoginValidation loginValidation = new LoginValidation(login,cancel);
+        login.addActionListener(loginValidation);
+        cancel.addActionListener(loginValidation);
     }
 
     public JButton getLogin() {

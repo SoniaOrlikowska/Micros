@@ -8,26 +8,29 @@ import java.awt.event.ActionListener;
 
 public class LoginValidation implements ActionListener {
 
-    LogFront logFront = new LogFront();
-    String userName = logFront.getUsernameField().getText();
-    String userPassword = logFront.getPasswordField().getText();
+    //todo zagadka jest jak przekazac zawartosc pol z LogFront wypelnione przez uzytkownika
+
+    // String userPassword = logFront.getPasswordField().getText();
 
     JButton loginButton;
     JButton cancelButton;
+   
 
-    public LoginValidation(JButton loginButton, JButton cancelButton){
+    public LoginValidation(JButton loginButton, JButton cancelButton) {
 
         this.loginButton = loginButton;
         this.cancelButton = cancelButton;
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if( this.loginButton == e.getSource()){
-            System.out.println(userName);
+        if (this.loginButton == e.getSource()) {
+            System.out.println("login");
         }
-        if(this.cancelButton == e.getSource()){
-            System.out.println(userPassword);
+        if (this.cancelButton == e.getSource()) {
+            System.out.println("cancel");
         }
     }
 }
+
