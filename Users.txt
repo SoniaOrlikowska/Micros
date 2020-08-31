@@ -1,0 +1,3 @@
+Sonia;haslo1;mail1;
+SoniaOrlikowska;haslo2;mail2;
+SoniaToTamto;haslo3;mail3;

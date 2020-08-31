@@ -1,4 +1,6 @@
-package micros;
+package micros.fronts;
+
+import micros.ProblemGenerator;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -15,8 +17,6 @@ public class MicrosFront implements ActionListener {
 
 
     JPanel microsPanel = new JPanel();
-    //Deklaracja wszystkich komponentów
-
     JLabel wybierzPoziom = new JLabel("Wybierz poziom:");
     JRadioButton easyRadio = new JRadioButton("Easy");
     JRadioButton mediumRadio = new JRadioButton("Medium");

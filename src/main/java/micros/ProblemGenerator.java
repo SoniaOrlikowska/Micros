@@ -21,6 +21,7 @@ public class ProblemGenerator {
             int wylosowaneZadanie = (int) (Math.random() * linesCount);
             tresc = Files.readAllLines(path).get(wylosowaneZadanie);
 
+
             String delim = ";";
             StringTokenizer stringT = new StringTokenizer(tresc, delim);
 
