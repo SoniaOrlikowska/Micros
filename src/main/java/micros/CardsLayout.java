@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-//todo podpiac sql bo co nie moge tego zrobic
+
 /**
  * Ta klasa ustawia CardLayout i actionlistnery dla buttonów przechodzących między stronami
  **/
@@ -24,11 +24,11 @@ public class CardsLayout {
     CardLayout cl = new CardLayout();
 
     SignFront signFront = new SignFront();
-
     JPanel firstSignPanel = signFront.getSignPanel();
 
     LogFront logFront = new LogFront();
     JPanel secondLogPanel = logFront.getLogUI();
+
     JButton blogin = logFront.getLogin();
     JLabel clickHere = logFront.getSignIn();
 
@@ -65,7 +65,7 @@ public class CardsLayout {
         // Karta startowa
         cl.show(Cont, "2");
 
-        blogin.addActionListener(new ActionListener() {
+        blogin.addActionListener(new ActionListener() { //todo tu musi byc spelniony warunek czy jest w database
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setJMenuBar(menuBar1);
@@ -87,6 +87,7 @@ public class CardsLayout {
             public void actionPerformed(ActionEvent e) {
                 frame.setJMenuBar(null);
                 cl.show(Cont, "2");
+                System.out.println("Back menu");
             }
         });
 
