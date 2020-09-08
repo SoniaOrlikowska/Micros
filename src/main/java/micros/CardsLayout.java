@@ -17,19 +17,19 @@ import java.awt.event.MouseEvent;
  **/
 
 public class CardsLayout {
+    private static CardsLayout instance;
 
     final JFrame frame = new JFrame("Mikros");
     JPanel Cont = new JPanel();
 
-    CardLayout cl = new CardLayout();
+    CardLayout cardLayout = new CardLayout();
 
     SignFront signFront = new SignFront();
     JPanel firstSignPanel = signFront.getSignPanel();
 
+
     LogFront logFront = new LogFront();
     JPanel secondLogPanel = logFront.getLogUI();
-
-    JButton blogin = logFront.getLogin();
     JLabel clickHere = logFront.getSignIn();
 
     MicrosFront microsFront = new MicrosFront();
@@ -47,13 +47,15 @@ public class CardsLayout {
     Icon womanIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
     Icon backIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/back.png");
 
-    public CardsLayout() {
-        Cont.setLayout(cl);
+    private CardsLayout() {
+        Frame();
+
+        Cont.setLayout(cardLayout);
 
         Cont.add(firstSignPanel, "1");
         Cont.add(secondLogPanel, "2");
         Cont.add(thirdMicrosPanel, "3");
-        Cont.add(profileFrontPanel,"4");
+        Cont.add(profileFrontPanel, "4");
 
         profileMenu.setIcon(womanIcon);
         backMenu.setIcon(backIcon);
@@ -63,22 +65,14 @@ public class CardsLayout {
         menuBar1.add(profileMenu); //todo można zrobić dwa menubary, aby w karcie rejestracji nie pojawiała się ikona profilu
 
         // Karta startowa
-        cl.show(Cont, "2");
-
-        blogin.addActionListener(new ActionListener() { //todo tu musi byc spelniony warunek czy jest w database
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.setJMenuBar(menuBar1);
-                cl.show(Cont, "3");
-            }
-        });
+        cardLayout.show(Cont, "2");
 
         clickHere.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 frame.setJMenuBar(menuBar1);
                 super.mouseClicked(e);
-                cl.show(Cont, "1");
+                cardLayout.show(Cont, "1");
             }
         });
 
@@ -86,7 +80,8 @@ public class CardsLayout {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setJMenuBar(null);
-                cl.show(Cont, "2");
+
+                cardLayout.show(Cont, "2");
                 System.out.println("Back menu");
             }
         });
@@ -95,21 +90,48 @@ public class CardsLayout {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setJMenuBar(menuBar1);
-                cl.show(Cont,"4");
+                cardLayout.show(Cont, "4");
             }
         });
 
     }
+
 
     public void Frame() {
 
         frame.getContentPane().add(Cont);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        frame.pack();
+        frame.setSize(400, 550);
+        frame.setResizable(true);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
+    public static CardsLayout getInstance() {
+        if (instance == null) instance = new CardsLayout();
+        return instance;
+    }
+
+    public SignFront getSignFront() {
+        return signFront;
+    }
+
+    public LogFront getLogFront() {
+        return logFront;
+    }
+
+    public JPanel getCont() {
+        return Cont;
+    }
+
+    public JMenuBar getMenuBar1() {
+        return menuBar1;
+    }
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
 
 }

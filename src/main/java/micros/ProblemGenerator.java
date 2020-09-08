@@ -42,7 +42,6 @@ public class ProblemGenerator {
     }
 
 
-
     //Metoda zliczająca linijki w pliku
     public int getLinesCount(File file) throws IOException {
 

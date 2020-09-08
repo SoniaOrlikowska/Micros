@@ -2,15 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/micros/LogFrontButtonsActionListeners.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/micros/PasswordHashing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/micros/SignFrontButtonsActionListeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Micros.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Micros.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/CardsLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/CardsLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/LoginValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/LoginValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/LoginValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/LogFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/LogFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/MicrosFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/SignFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/SignFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$4.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/LoginValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/LoginValidation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/LoginValidation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/LogFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/LogFront.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/MicrosFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/MicrosFront.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/SignFront$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/SignFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/SignFront.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +94,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DataBaseConnectivity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="micros.DataBaseConnectivity" />
       <module name="Micros" />
@@ -136,11 +156,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.DataBaseConnectivity" />
         <item itemvalue="Application.Mariuszowe" />
         <item itemvalue="Java Scratch.Menu" />
-        <item itemvalue="Java Scratch.Menu (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -177,11 +196,11 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753939386" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1598988513828">
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1599499518954">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1595361625396" />
-    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1598988513828" />
+    <state x="533" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1599499518954" />
     <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1594315173847">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -210,26 +229,30 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="353" y="51" key="CommitChangelistDialog2/0.23.1440.852@0.23.1440.852" timestamp="1593895910173" />
-    <state width="1396" height="98" key="GridCell.Tab.0.bottom" timestamp="1598991877099">
+    <state x="100" y="123" width="1240" height="652" key="DiffContextDialog" timestamp="1599389345743">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="100" y="123" width="1240" height="652" key="DiffContextDialog/0.23.1440.852@0.23.1440.852" timestamp="1599389345743" />
+    <state width="1396" height="144" key="GridCell.Tab.0.bottom" timestamp="1599548509020">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598377999916" />
-    <state width="1396" height="98" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1598991877099" />
-    <state width="1396" height="98" key="GridCell.Tab.0.center" timestamp="1598991877098">
+    <state width="1396" height="144" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1599548509020" />
+    <state width="1396" height="144" key="GridCell.Tab.0.center" timestamp="1599548509018">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598377999913" />
-    <state width="1396" height="98" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1598991877098" />
-    <state width="1396" height="98" key="GridCell.Tab.0.left" timestamp="1598991877098">
+    <state width="1396" height="144" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1599548509018" />
+    <state width="1396" height="144" key="GridCell.Tab.0.left" timestamp="1599548509017">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598377999911" />
-    <state width="1396" height="98" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1598991877098" />
-    <state width="1396" height="98" key="GridCell.Tab.0.right" timestamp="1598991877098">
+    <state width="1396" height="144" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1599548509017" />
+    <state width="1396" height="144" key="GridCell.Tab.0.right" timestamp="1599548509018">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state width="836" height="291" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598377999915" />
-    <state width="1396" height="98" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1598991877098" />
+    <state width="1396" height="144" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1599548509018" />
     <state width="1396" height="131" key="GridCell.Tab.1.bottom" timestamp="1598079806937">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
@@ -250,6 +273,10 @@
     </state>
     <state width="1396" height="158" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1595367961439" />
     <state width="1396" height="131" key="GridCell.Tab.1.right/0.23.1440.852@0.23.1440.852" timestamp="1598079806936" />
+    <state x="258" y="111" key="Maven.ArtifactSearchDialog" timestamp="1599547494874">
+      <screen x="0" y="23" width="1440" height="852" />
+    </state>
+    <state x="258" y="111" key="Maven.ArtifactSearchDialog/0.23.1440.852@0.23.1440.852" timestamp="1599547494874" />
     <state x="555" y="167" key="RollbackChangesDialog" timestamp="1593970719015">
       <screen x="0" y="23" width="1440" height="852" />
     </state>

@@ -1,25 +1,16 @@
 package micros;
 
 import javax.swing.*;
+import java.security.NoSuchAlgorithmException;
 
 public class Main {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() { //co to jest wlasciwie?
+        SwingUtilities.invokeLater(new Runnable() { //todo co to jest wlasciwie? Po co mi to ?
 
             @Override
             public void run() {
-                /*JFrame frame = new JFrame("Mikros");
-                frame.getContentPane().add(new LogFront().getLogUI());
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.setResizable(false);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setVisible(true);*/
-                new CardsLayout().Frame();
 
-
-
+                CardsLayout.getInstance();
             }
         });
 

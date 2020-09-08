@@ -1,27 +1,19 @@
 package micros.fronts;
 
-import micros.DataBaseConnectivity;
-import micros.LoginValidation;
+import micros.LogFrontButtonsActionListeners;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-public class LogFront implements ActionListener {
+public class LogFront {
 
     JPanel logPanel = new JPanel();
 
-    JLabel userNameLabel = new JLabel("Login:");
+    JLabel userNameLabel = new JLabel("Login:    ");
     JTextField usernameField = new JTextField();
-
 
     JLabel passwordLabel = new JLabel("Password:");
     JPasswordField passwordField = new JPasswordField();
-    String password = passwordField.getText();
 
     JButton cancel = new JButton("Cancel");
     JButton login = new JButton("Login");
@@ -65,14 +57,14 @@ public class LogFront implements ActionListener {
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new Insets(10, 10, 0, 0);
+        gridBagConstraints.insets = new Insets(10, 20, 0, 0);
         gridBagConstraints.weightx = 1;
         logPanel.add(cancel, gridBagConstraints);
 
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.insets = new Insets(10, 10, 0, 0);
+        gridBagConstraints.insets = new Insets(10, 20, 0, 10);
         gridBagConstraints.weightx = 1;
         logPanel.add(login, gridBagConstraints);
 
@@ -85,53 +77,28 @@ public class LogFront implements ActionListener {
         logPanel.add(signIn, gridBagConstraints);
         signIn.setForeground(Color.BLUE);
 
-        // LoginValidation loginValidation = new LoginValidation(login,cancel); //todo do skonczenia jak bede wiedziala jak zrobic action listner w innej klasie
-        //login.addActionListener(loginValidation);
-        //cancel.addActionListener(loginValidation);
-        login.addActionListener(this);
-        cancel.addActionListener(this);
-
+        addActionListeners();
     }
 
-    public JButton getLogin() {
-        return this.login;
+    private void addActionListeners() {
+
+        login.addActionListener(new LogFrontButtonsActionListeners.LoginButtonActionListener());
+        cancel.addActionListener(new LogFrontButtonsActionListeners.CancelButtonActionListener());
     }
 
     public JPanel getLogUI() {
         return this.logPanel;
     }
 
+    public JTextField getUsernameField() {
+        return usernameField;
+    }
+
+    public JPasswordField getPasswordField() { return passwordField; }
+
     public JLabel getSignIn() {
         return this.signIn;
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        Object source = e.getSource();
 
-        if(source == login && usernameField != null){
-            //todo check if this username exists in database
-            try{
-                String queryString = "SELECT * from userData WHERE USERNAME = ?";
-                PreparedStatement preparedStatementstatement = DataBaseConnectivity.getConnection()
-                        .prepareStatement(queryString);
-                preparedStatementstatement.setString(1, usernameField.getText());
-                ResultSet resultSet = preparedStatementstatement.executeQuery();
-
-                if (resultSet.next()) {
-                    System.out.println("success: u can log in");
-                } else {
-                    System.out.println("no such user name in database");
-                }
-            }
-          catch (SQLException | ClassNotFoundException ex) {
-
-              ex.printStackTrace();
-            }
-
-        }
-        if(source == cancel){
-            System.out.println("Cancel");
-        }
-    }
 }

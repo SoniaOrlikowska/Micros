@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class MicrosFront implements ActionListener {
-    //todo moze zrobic pierwszy panel logowanie do pofilu, druga karta profil z liczba uzyskanych punktow(sprawdzanie czy dane zadanie nie bylo juz rozwiazane), 3 karta zadanie, no i dorobic wskazowki
+    //todo druga karta profil z liczba uzyskanych punktow(sprawdzanie czy dane zadanie nie bylo juz rozwiazane), 3 karta zadanie, no i dorobic wskazowki
 
 
     JPanel microsPanel = new JPanel();
@@ -227,7 +227,7 @@ public class MicrosFront implements ActionListener {
         hint.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if(zadanie.getIcon() != null) {
+                if (zadanie.getIcon() != null) {
                     JOptionPane.showMessageDialog(null, "Hint", "hint", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
@@ -320,7 +320,6 @@ public class MicrosFront implements ActionListener {
     }
 
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
         //deklarcja sourceGeneruj dla generuj Button i sourceSumbit dla submitButton
@@ -331,21 +330,29 @@ public class MicrosFront implements ActionListener {
         //EasyCałki
         if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj) displayProblem();
             //EasyPochodne
-        else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj) displayProblem();
+        else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj)
+            displayProblem();
             //EasyMatrix
-        else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj) displayProblem();
+        else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj)
+            displayProblem();
             //MediumCałki
-        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj) displayProblem();
+        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj)
+            displayProblem();
             //MediumPochodne
-        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj) displayProblem();
+        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj)
+            displayProblem();
             //MediumMatrix
-        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj) displayProblem();
+        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj)
+            displayProblem();
             //HardCałki
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj) displayProblem();
+        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj)
+            displayProblem();
             //HardPochodne
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj) displayProblem();
+        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj)
+            displayProblem();
             //HardMatrix
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj) displayProblem();
+        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj)
+            displayProblem();
 
         if (!(zadanie == null) && !rozwiazanie.getText().equals("") && sourceSumbit == submit) {
 
