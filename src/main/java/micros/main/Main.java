@@ -1,4 +1,6 @@
-package micros;
+package micros.main;
+
+import micros.CardsLayout;
 
 import javax.swing.*;
 import java.security.NoSuchAlgorithmException;

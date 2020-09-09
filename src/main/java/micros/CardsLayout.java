@@ -113,13 +113,13 @@ public class CardsLayout {
         return instance;
     }
 
-    public SignFront getSignFront() {
-        return signFront;
-    }
+    public SignFront getSignFront() { return signFront; }
 
     public LogFront getLogFront() {
         return logFront;
     }
+
+    public MicrosFront getMicrosFront() { return microsFront; }
 
     public JPanel getCont() {
         return Cont;

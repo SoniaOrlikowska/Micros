@@ -1,18 +1,19 @@
 package micros.fronts;
 
+import micros.MicrosFrontButtonsActionListeners;
 import micros.ProblemGenerator;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class MicrosFront implements ActionListener {
+public class MicrosFront {
     //todo druga karta profil z liczba uzyskanych punktow(sprawdzanie czy dane zadanie nie bylo juz rozwiazane), 3 karta zadanie, no i dorobic wskazowki
 
 
@@ -22,8 +23,9 @@ public class MicrosFront implements ActionListener {
     JRadioButton mediumRadio = new JRadioButton("Medium");
     JRadioButton hardRadio = new JRadioButton("Hard");
     JLabel wybierzDziedzine = new JLabel("Wybierz dziedzinę:");
-    String dziedziny[] = {"Całki", "Pochodne", "Macierze"};
+    String[] dziedziny = {"Całki", "Pochodne", "Macierze"};
     JComboBox dziedzina = new JComboBox(dziedziny);
+
     JButton generuj = new JButton("Generuj");
     JLabel zadanie = new JLabel();
     JLabel twojeRozwiazanieLabel = new JLabel("Odpowiedź:");
@@ -38,12 +40,9 @@ public class MicrosFront implements ActionListener {
 
     String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
 
-    ImageIcon blednaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/wrong.png");
-    ImageIcon poprawnaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/correct.png");
     ImageIcon hintIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/hint.png");
     ImageIcon back = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/back.png");
     ImageIcon woman = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
-
 
     //Deklaracja wszystkich plikow
 
@@ -80,13 +79,11 @@ public class MicrosFront implements ActionListener {
     //Layout setup
     public MicrosFront() {
 
-
         // set panel layout and look
         GridBagLayout gbl = new GridBagLayout();
         GridBagConstraints gbc = new GridBagConstraints();
         microsPanel.setLayout(gbl);
         microsPanel.setBackground(Color.white);
-
 
         // Add components to panel
 
@@ -216,24 +213,19 @@ public class MicrosFront implements ActionListener {
         gbc.weightx = 1;
         microsPanel.add(save, gbc);
 
-        //ActionListners
-        easyRadio.addActionListener(this);
-        mediumRadio.addActionListener(this);
-        hardRadio.addActionListener(this);
-        generuj.addActionListener(this);
-        submit.addActionListener(this);
-        clear.addActionListener(this);
-        dziedzina.addActionListener(this);
-        hint.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (zadanie.getIcon() != null) {
-                    JOptionPane.showMessageDialog(null, "Hint", "hint", JOptionPane.INFORMATION_MESSAGE);
-                }
-            }
-        });
+
+        addActionListeners();
 
     }
+
+    private void addActionListeners() {
+        clear.addActionListener(new MicrosFrontButtonsActionListeners.ClearButtonActionListener());
+        submit.addActionListener(new MicrosFrontButtonsActionListeners.SubmitButtonActionListener());
+        generuj.addActionListener(new MicrosFrontButtonsActionListeners.GenerateButtonActionListener());
+        hint.addMouseListener(new MicrosFrontButtonsActionListeners.HintButtonActionListener());
+
+    }
+
 
     //Metoda wyświetlająca zadanie do zrobienia
     public Icon displayProblem() {
@@ -273,6 +265,7 @@ public class MicrosFront implements ActionListener {
             }
         }
         ProblemGenerator problemGenerator = new ProblemGenerator(file, path);
+
         File file = new File("/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources/");
         File[] files = file.listFiles();
         Arrays.sort(files, new Comparator<File>() {
@@ -290,7 +283,6 @@ public class MicrosFront implements ActionListener {
         deleteFiles(files);
         prawidlowaOdpowiedz = problemGenerator.trescOdpowiedzi;
 
-
         return zadanie.getIcon();
     }
 
@@ -301,77 +293,48 @@ public class MicrosFront implements ActionListener {
         }
     }
 
-    //Metoda wyświetlająca panel
 
-    public JPanel getUI() {
-        return microsPanel;
+    //Metoda zwracająca prawidłową wartość rozwiązania
+
+    /*public void setPrawidlowaOdpowiedz(String prawidlowaOdpowiedz) {
+        this.prawidlowaOdpowiedz = prawidlowaOdpowiedz;
+    }*/
+
+
+    public JRadioButton getEasyRadio() {
+        return easyRadio;
     }
 
-    //Metoda zwracająca wartość wpisanego rozwiązania
+    public JRadioButton getMediumRadio() {
+        return mediumRadio;
+    }
+
+    public JRadioButton getHardRadio() {
+        return hardRadio;
+    }
 
     public JTextArea getRozwiazanie() {
         return rozwiazanie;
     }
 
-    //Metoda zwracająca prawidłową wartość rozwiązania
-
-    public void setPrawidlowaOdpowiedz(String prawidlowaOdpowiedz) {
-        this.prawidlowaOdpowiedz = prawidlowaOdpowiedz;
+    public JPanel getUI() {
+        return microsPanel;
     }
 
+    public JLabel getZadanie() {
+        return zadanie;
+    }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        //deklarcja sourceGeneruj dla generuj Button i sourceSumbit dla submitButton
-        Object sourceGeneruj = e.getSource();
-        Object sourceSumbit = e.getSource();
-        Object sourceClear = e.getSource();
+    public String getPrawidlowaOdpowiedz() {
+        return prawidlowaOdpowiedz;
+    }
 
-        //EasyCałki
-        if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj) displayProblem();
-            //EasyPochodne
-        else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj)
-            displayProblem();
-            //EasyMatrix
-        else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj)
-            displayProblem();
-            //MediumCałki
-        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj)
-            displayProblem();
-            //MediumPochodne
-        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj)
-            displayProblem();
-            //MediumMatrix
-        else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj)
-            displayProblem();
-            //HardCałki
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0 && sourceGeneruj == generuj)
-            displayProblem();
-            //HardPochodne
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1 && sourceGeneruj == generuj)
-            displayProblem();
-            //HardMatrix
-        else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2 && sourceGeneruj == generuj)
-            displayProblem();
+    public JComboBox getDziedzina() {
+        return dziedzina;
+    }
 
-        if (!(zadanie == null) && !rozwiazanie.getText().equals("") && sourceSumbit == submit) {
-
-            if (rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                JOptionPane.showMessageDialog(null, "Poprawna odpowiedź", "Poprawna odpowiedź!", JOptionPane.INFORMATION_MESSAGE, poprawnaIcon);
-
-            }
-            if (zadanie.getIcon() != null && !rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                JOptionPane.showMessageDialog(null, "Spróbuj jeszcze raz", "Błędna odpowiedż", JOptionPane.INFORMATION_MESSAGE, blednaIcon);
-
-            }
-        }
-
-        if (sourceClear == clear) {
-
-            zadanie.setIcon(null);
-            rozwiazanie.setText(" ");
-        }
-
+    public String[] getDziedziny() {
+        return dziedziny;
     }
 }
 
