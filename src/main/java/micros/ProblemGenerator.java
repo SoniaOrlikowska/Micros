@@ -1,44 +1,74 @@
 package micros;
 
+import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class ProblemGenerator {
+    //todo inaczej ponazywać te zmienne
 
-    public String tresc;
-    public String trescZadania;
-    public String trescOdpowiedzi;
+    String tresc;
+    String trescZadania;
+    String trescOdpowiedzi;
     int linesCount;
-
+    int wylosowaneZadanie;
 
     //Generator zadania
+
     public ProblemGenerator(File file, Path path) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
+
             linesCount = getLinesCount(file);
-            int wylosowaneZadanie = (int) (Math.random() * linesCount);
+
+            wylosowaneZadanie = (int) (Math.random() * linesCount);
+
             tresc = Files.readAllLines(path).get(wylosowaneZadanie);
 
             String delim = ";";
             StringTokenizer stringT = new StringTokenizer(tresc, delim);
-
             trescZadania = stringT.nextToken();         //zmienna przechowujaca tresc zadania
-            System.out.println("Zmieniłem wartość treść zadania na : " + trescZadania);
-            latexGenerator();
             trescOdpowiedzi = stringT.nextToken();      //zmienna przechowujaca tresc odpowiedzi
+            System.out.println("PG Tresc:" + trescOdpowiedzi);
+
+            Latex.renderLatex(trescZadania);
 
             reader.close();
 
+            System.out.println("Po zamkniecou: " + trescOdpowiedzi);
+            File srcFile = new File("/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources/");
+            File[] files = srcFile.listFiles();
+            Arrays.sort(files, new Comparator<File>() {
+                @Override
+                public int compare(File o1, File o2) {
+                    return o1.getName().compareTo(o2.getName());
+                }
+            });
+
+            String name = "";
+            if (files != null)
+                name = files[files.length - 1].getPath();
+
+            CardsLayout cl = CardsLayout.getInstance();
+
+            cl.getMicrosFront().getZadanie().setIcon(new ImageIcon(name));
+            cl.getMicrosFront().setPrawidlowaOdpowiedz(trescOdpowiedzi);
+
+            for(File file1 : files) {
+                file1.delete();
+            }
+
+            System.out.println("Po usunieciu " + trescOdpowiedzi);
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+
     }
 
-    public void latexGenerator() throws IOException {
-        Latex.renderLatex(trescZadania);
-    }
 
 
     //Metoda zliczająca linijki w pliku
@@ -64,5 +94,10 @@ public class ProblemGenerator {
         } finally {
             is.close();
         }
+    }
+
+    public String getTrescOdpowiedzi() {
+        System.out.println("w getterze" + trescOdpowiedzi);
+        return trescOdpowiedzi;
     }
 }

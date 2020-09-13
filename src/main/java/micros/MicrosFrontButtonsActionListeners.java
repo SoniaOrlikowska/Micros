@@ -1,17 +1,51 @@
 package micros;
 
-import micros.fronts.MicrosFront;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Arrays;
 
 public class MicrosFrontButtonsActionListeners {
 
     public static class GenerateButtonActionListener implements ActionListener {
+        //Deklaracja wszystkich plikow
+        //EasyFiles
+        File easyCalki = new File("EasyCalki.txt");
+        Path easyCalkiPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/EasyCalki.txt");
+
+        File easyPochodne = new File("EasyPochodne.txt");
+        Path easyPochodnePath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/EasyPochodne.txt");
+
+        File easyMatrix = new File("EasyMacierze.txt");
+        Path easyMatrixPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/EasyMacierze.txt");
+
+        //MediumFiles
+        File mediumCalki = new File("MediumCalki.txt");
+        Path mediumCalkiPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/MediumCalki.txt");
+
+        File mediumPochodne = new File("MediumPochodne.txt");
+        Path mediumPochodnePath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/MediumPochodne.txt");
+
+        File mediumMatrix = new File("MediumMacierze.txt");
+        Path mediumMatrixPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/MediumMacierze.txt");
+
+        //HardFiles
+        File hardCalki = new File("HardCalki.txt");
+        Path hardCalkiPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/HardCalki.txt");
+
+        File hardPochodne = new File("HardPochodne.txt");
+        Path hardPochodnePath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/HardPochodne.txt");
+
+        File hardMatrix = new File("HardMacierze.txt");
+        Path hardMatrixPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/HardMacierze.txt");
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -22,34 +56,65 @@ public class MicrosFrontButtonsActionListeners {
             JRadioButton hardRadio = cl.getMicrosFront().getHardRadio();
             String[] dziedziny = cl.getMicrosFront().getDziedziny();
             JComboBox dziedzina = cl.getMicrosFront().getDziedzina();
-
+            File file;
+            Path path;
 
             //EasyCałki
-            if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 0) cl.getMicrosFront().displayProblem();
-                //EasyPochodne
-            else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 1)
-                cl.getMicrosFront().displayProblem();
-                //EasyMatrix
-            else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 2)
-                cl.getMicrosFront().displayProblem();
-                //MediumCałki
-            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 0)
-                cl.getMicrosFront().displayProblem();
-                //MediumPochodne
-            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 1)
-                cl.getMicrosFront().displayProblem();
-                //MediumMatrix
-            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2)
-                cl.getMicrosFront().displayProblem();
-                //HardCałki
-            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0)
-                cl.getMicrosFront().displayProblem();
-                //HardPochodne
-            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1)
-                cl.getMicrosFront().displayProblem();
-                //HardMatrix
-            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2)
-                cl.getMicrosFront().displayProblem();
+            if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+
+                file = easyCalki;
+                path = easyCalkiPath;
+                new ProblemGenerator(file, path);
+            }
+            //EasyPochodne
+            else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+                file = easyPochodne;
+                path = easyPochodnePath;
+                new ProblemGenerator(file, path);
+            }
+            //EasyMatrix
+            else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+                file = easyMatrix;
+                path = easyMatrixPath;
+                new ProblemGenerator(file, path);
+            }
+            //MediumCałki
+            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+                file = mediumCalki;
+                path = mediumCalkiPath;
+                new ProblemGenerator(file, path);
+            }
+            //MediumPochodne
+            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+                file = mediumPochodne;
+                path = mediumPochodnePath;
+                new ProblemGenerator(file, path);
+            }
+            //MediumMatrix
+            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+                file = mediumMatrix;
+                path = mediumMatrixPath;
+                new ProblemGenerator(file, path);
+            }
+            //HardCałki
+            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+                file = hardCalki;
+                path = hardCalkiPath;
+                new ProblemGenerator(file, path);
+            }
+            //HardPochodne
+            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+                file = hardPochodne;
+                path = hardPochodnePath;
+                new ProblemGenerator(file, path);
+            }
+            //HardMatrix
+            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+                file = hardMatrix;
+                path = hardMatrixPath;
+                new ProblemGenerator(file, path);
+
+            }
 
         }
     }
@@ -70,7 +135,8 @@ public class MicrosFrontButtonsActionListeners {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            //CardsLayout cl = CardsLayout.getInstance();
+            ProblemVeryfier problemVeryfier = new ProblemVeryfier();
+            problemVeryfier.ProblemVeryfier();
         }
     }
 
@@ -78,26 +144,35 @@ public class MicrosFrontButtonsActionListeners {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            CardsLayout cl = CardsLayout.getInstance();
+            ProblemVeryfier problemVeryfier = new ProblemVeryfier();
+            problemVeryfier.ProblemVeryfier();
+            try {
+                if (problemVeryfier.isFlag() == true) {
 
-            JLabel zadanie = cl.getMicrosFront().getZadanie();
-            JTextArea rozwiazanie = cl.getMicrosFront().getRozwiazanie();
-            String prawidlowaOdpowiedz = cl.getMicrosFront().getPrawidlowaOdpowiedz();
+                    //todo wpisujemy do bazy danych
 
-            ImageIcon blednaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/wrong.png");
-            ImageIcon poprawnaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/correct.png");
+                    String id_user = "1";
+                    String problem = "2";
+                    String score = "1";
 
-            if (zadanie != null && !rozwiazanie.getText().equals("")) {
+                    System.out.println("Tu jest id:" + id_user);
+                    String insertUserScoreQueryStirng = "INSERT into SCORE ( ID_USER, PROBLEM, SCORE) values(?,?,?)";
 
-                if (rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                    JOptionPane.showMessageDialog(null, "Poprawna odpowiedź", "Poprawna odpowiedź!", JOptionPane.INFORMATION_MESSAGE, poprawnaIcon);
-                    //todo wpisac do bazy danych nie? :)
+                    PreparedStatement preparedStatement = DataBaseConnectivity.getConnection()
+                            .prepareStatement(insertUserScoreQueryStirng);
 
+                    preparedStatement.setString(1, id_user);
+                    preparedStatement.setString(2, problem);
+                    preparedStatement.setString(3, score);
+
+
+                    int resultSet = preparedStatement.executeUpdate();
+
+                } else {
+                    // todo komunikat, że rozwiązanie jest niepoprawne
                 }
-                if (zadanie.getIcon() != null && !rozwiazanie.getText().equals(prawidlowaOdpowiedz)) {
-                    JOptionPane.showMessageDialog(null, "Spróbuj jeszcze raz", "Błędna odpowiedż", JOptionPane.INFORMATION_MESSAGE, blednaIcon);
-
-                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
         }
     }

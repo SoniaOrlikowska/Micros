@@ -9,9 +9,6 @@ import java.io.IOException;
 
 public class Latex {
 
-    public Latex() {
-    }
-
     public static void renderLatex(String trescZadania) throws IOException {
 
         TeXFormula formula = new TeXFormula(trescZadania);
