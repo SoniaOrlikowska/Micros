@@ -14,7 +14,12 @@ public class ProblemGenerator {
     String tresc;
     String trescZadania;
     String trescOdpowiedzi;
+    String numerZadania;
+    String score;
     int linesCount;
+
+
+
     int wylosowaneZadanie;
 
     //Generator zadania
@@ -33,6 +38,8 @@ public class ProblemGenerator {
             StringTokenizer stringT = new StringTokenizer(tresc, delim);
             trescZadania = stringT.nextToken();         //zmienna przechowujaca tresc zadania
             trescOdpowiedzi = stringT.nextToken();      //zmienna przechowujaca tresc odpowiedzi
+            numerZadania = stringT.nextToken();
+            score = stringT.nextToken();
             System.out.println("PG Tresc:" + trescOdpowiedzi);
 
             Latex.renderLatex(trescZadania);
@@ -57,6 +64,8 @@ public class ProblemGenerator {
 
             cl.getMicrosFront().getZadanie().setIcon(new ImageIcon(name));
             cl.getMicrosFront().setPrawidlowaOdpowiedz(trescOdpowiedzi);
+            cl.getMicrosFront().setNumerZadania(numerZadania);
+            cl.getMicrosFront().setScore(score);
 
             for(File file1 : files) {
                 file1.delete();
@@ -96,6 +105,9 @@ public class ProblemGenerator {
         }
     }
 
+    public String getNumerZadania() {
+        return numerZadania;
+    }
     public String getTrescOdpowiedzi() {
         System.out.println("w getterze" + trescOdpowiedzi);
         return trescOdpowiedzi;

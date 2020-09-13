@@ -1,6 +1,8 @@
 package micros;
 
 
+import micros.main.User;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -113,12 +115,9 @@ public class MicrosFrontButtonsActionListeners {
                 file = hardMatrix;
                 path = hardMatrixPath;
                 new ProblemGenerator(file, path);
-
             }
-
         }
     }
-
 
     public static class ClearButtonActionListener implements ActionListener {
 
@@ -144,32 +143,40 @@ public class MicrosFrontButtonsActionListeners {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            CardsLayout cl = CardsLayout.getInstance();
             ProblemVeryfier problemVeryfier = new ProblemVeryfier();
             problemVeryfier.ProblemVeryfier();
+
+
             try {
-                if (problemVeryfier.isFlag() == true) {
+                if (problemVeryfier.isFlag()) {
 
-                    //todo wpisujemy do bazy danych
+                    //todo sprawdzac czy takie zadnie przez takiego uzytkownika bylo juz rozwiazane
 
-                    String id_user = "1";
-                    String problem = "2";
-                    String score = "1";
+                    User user = User.getInstance();
 
-                    System.out.println("Tu jest id:" + id_user);
-                    String insertUserScoreQueryStirng = "INSERT into SCORE ( ID_USER, PROBLEM, SCORE) values(?,?,?)";
+                    String userName = user.getUserName();
+                    String userID = user.getUserID(userName);
+                    String problem = cl.getMicrosFront().getNumerZadania();
+                    String score = cl.getMicrosFront().getScore();
+
+                    String insertUserScoreQueryString = "INSERT into SCORE ( ID_USER, PROBLEM, SCORE) values(?,?,?)";
 
                     PreparedStatement preparedStatement = DataBaseConnectivity.getConnection()
-                            .prepareStatement(insertUserScoreQueryStirng);
+                            .prepareStatement(insertUserScoreQueryString);
 
-                    preparedStatement.setString(1, id_user);
-                    preparedStatement.setString(2, problem);
-                    preparedStatement.setString(3, score);
-
+                    preparedStatement.setInt(1, Integer.parseInt(userID));
+                    preparedStatement.setInt(2, Integer.parseInt(problem));
+                    preparedStatement.setInt(3, Integer.parseInt(score));
 
                     int resultSet = preparedStatement.executeUpdate();
 
+                    cl.getProfileFront().setUserNameString(userName); //todo nie dziala to przekazywanie do labelu w ProfileFront
+                    cl.getProfileFront().setUserScoreString(score);
+
                 } else {
                     // todo komunikat, że rozwiązanie jest niepoprawne
+
                 }
             } catch (Exception ex) {
                 ex.printStackTrace();

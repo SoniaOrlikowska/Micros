@@ -115,6 +115,10 @@ public class CardsLayout {
 
     public SignFront getSignFront() { return signFront; }
 
+    public ProfileFront getProfileFront() {
+        return profileFront;
+    }
+
     public LogFront getLogFront() {
         return logFront;
     }

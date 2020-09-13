@@ -6,14 +6,24 @@ import java.awt.*;
 public class ProfileFront {
 
     JPanel userProfilePanel = new JPanel();
+    JLabel userName = new JLabel();
+    JLabel userScore = new JLabel();
+    JLabel getUserScore = new JLabel();
 
-    JLabel userName = new JLabel("NAME");
-    JLabel userScore = new JLabel("SCORE");
-    JLabel getUserScore = new JLabel("23");
+    String userNameString;
+    String userScoreString;
 
+    public void setUserScoreString(String userScoreString) {
+        this.userScoreString = userScoreString;
+    }
 
+    public void setUserNameString(String userNameString) {
+        this.userNameString = userNameString;
+    }
 
-    public ProfileFront(){
+    public ProfileFront() {
+        userName.setText(userNameString);
+        userScore.setText(userScoreString);
 
         GridBagLayout gridBagLayout = new GridBagLayout();
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
@@ -26,24 +36,26 @@ public class ProfileFront {
         gridBagConstraints.weightx = 0;
         userProfilePanel.add(userName, gridBagConstraints);
 
-
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new Insets(10, 10, 0, 20);
         gridBagConstraints.weightx = 1;
-        userProfilePanel.add(userScore,gridBagConstraints);
+        userProfilePanel.add(userScore, gridBagConstraints);
 
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new Insets(10, 10, 0, 0);
         gridBagConstraints.weightx = 1;
-        userProfilePanel.add(getUserScore,gridBagConstraints);
+        userProfilePanel.add(getUserScore, gridBagConstraints);
 
     }
+
     public JPanel getUserProfilePanel() {
         return userProfilePanel;
     }
+
+
 }
 

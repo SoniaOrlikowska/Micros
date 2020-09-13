@@ -1,5 +1,6 @@
 package micros.fronts;
 
+import micros.CardsLayout;
 import micros.LogFrontButtonsActionListeners;
 
 import javax.swing.*;
@@ -77,7 +78,9 @@ public class LogFront {
         logPanel.add(signIn, gridBagConstraints);
         signIn.setForeground(Color.BLUE);
 
+
         addActionListeners();
+
     }
 
     private void addActionListeners() {
@@ -85,6 +88,8 @@ public class LogFront {
         login.addActionListener(new LogFrontButtonsActionListeners.LoginButtonActionListener());
         cancel.addActionListener(new LogFrontButtonsActionListeners.CancelButtonActionListener());
     }
+
+
 
     public JPanel getLogUI() {
         return this.logPanel;

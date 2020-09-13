@@ -33,6 +33,11 @@ public class MicrosFront {
 
     String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
 
+
+    String numerZadania;
+    String score;
+
+
     ImageIcon hintIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/hint.png");
     ImageIcon back = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/back.png");
     ImageIcon woman = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
@@ -180,12 +185,28 @@ public class MicrosFront {
 
     }
 
+    public String getNumerZadania() {
+        return numerZadania;
+    }
+
     public void setPrawidlowaOdpowiedz(String prawidlowaOdpowiedz) {
         this.prawidlowaOdpowiedz = prawidlowaOdpowiedz;
     }
 
+    public void setNumerZadania(String numerZadania) {
+        this.numerZadania = numerZadania;
+    }
+
     public String getPrawidlowaOdpowiedz() {
         return prawidlowaOdpowiedz;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
     }
 
     private void addActionListeners() {

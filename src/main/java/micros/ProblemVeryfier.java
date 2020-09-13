@@ -19,6 +19,7 @@ public class ProblemVeryfier {
         JTextArea rozwiazanie = cl.getMicrosFront().getRozwiazanie();
         String prawidlowaOdpowiedz = cl.getMicrosFront().getPrawidlowaOdpowiedz();
 
+
         ImageIcon blednaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/wrong.png");
         ImageIcon poprawnaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/correct.png");
 

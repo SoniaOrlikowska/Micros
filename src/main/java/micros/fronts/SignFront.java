@@ -1,6 +1,7 @@
 package micros.fronts;
 
 
+import micros.CardsLayout;
 import micros.SignFrontButtonsActionListeners;
 
 import javax.swing.*;
@@ -105,12 +106,14 @@ public class SignFront {
 
         addListeners();
 
+
     }
      public void addListeners(){
 
         submitSign.addActionListener(new SignFrontButtonsActionListeners.SubmitButtonActionListener());
         clearSubmit.addActionListener(new SignFrontButtonsActionListeners.ClearAllButtonActionListener());
     }
+
 
 
     public JPanel getSignPanel() {

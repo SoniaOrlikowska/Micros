@@ -1,5 +1,7 @@
 package micros;
 
+import micros.main.User;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,18 +15,20 @@ public class LogFrontButtonsActionListeners {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            CardsLayout cl = CardsLayout.getInstance();
+            User user = User.getInstance();
+            CardsLayout cl = CardsLayout.getInstance(); //todo pozbyc sie wgl tutaj tego cl ono jest tylko w menu barach i w cancel ActionListnerze
             PasswordHashing ph = new PasswordHashing();
 
-            if (cl.getLogFront().getUsernameField() != null && cl.getLogFront().getPasswordField() != null) {
+            if (user.getUserName() != null && user.getUserPassword() != null) {
                 try {
                     String queryString = "SELECT * from USER WHERE USERNAME  = ? AND PASSWORD = ?";
 
                     PreparedStatement preparedStatementstatement = DataBaseConnectivity.getConnection()
                             .prepareStatement(queryString);
 
-                    preparedStatementstatement.setString(1, cl.getLogFront().getUsernameField().getText());
-                    preparedStatementstatement.setString(2, ph.HashPassword(cl.getLogFront().getPasswordField().getText()));
+
+                    preparedStatementstatement.setString(1, user.getUserName());
+                    preparedStatementstatement.setString(2, ph.HashPassword(user.getUserPassword()));
 
                     ResultSet resultSet = preparedStatementstatement.executeQuery();
 
@@ -49,6 +53,8 @@ public class LogFrontButtonsActionListeners {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+
+            //todo dlaczego settery usera nie dzialaja?
 
             CardsLayout cl = CardsLayout.getInstance();
 
