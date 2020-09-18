@@ -25,6 +25,7 @@ public class LogFront {
         GridBagLayout gridBagLayout = new GridBagLayout();
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         logPanel.setLayout(gridBagLayout);
+        logPanel.setBackground(Color.white);
 
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 0;
@@ -40,6 +41,7 @@ public class LogFront {
         gridBagConstraints.insets = new Insets(100, 10, 0, 0);
         gridBagConstraints.weightx = 1;
         logPanel.add(usernameField, gridBagConstraints);
+        usernameField.setBorder(BorderFactory.createEtchedBorder());
 
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 0;
@@ -54,6 +56,7 @@ public class LogFront {
         gridBagConstraints.insets = new Insets(10, 10, 0, 0);
         gridBagConstraints.weightx = 1;
         logPanel.add(passwordField, gridBagConstraints);
+        passwordField.setBorder(BorderFactory.createEtchedBorder());
 
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 0;

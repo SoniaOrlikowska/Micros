@@ -14,9 +14,9 @@ public class LogFrontButtonsActionListeners {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            User user = User.getInstance();
             CardsLayout cl = CardsLayout.getInstance(); //todo pozbyc sie wgl tutaj tego cl ono jest tylko w menu barach i w cancel ActionListnerze
+
+            User user = new User(cl.getLogFront().getUsernameField().getText(),cl.getLogFront().getPasswordField().getText());
             PasswordHashing ph = new PasswordHashing();
 
             if (user.getUserName() != null && user.getUserPassword() != null) {
@@ -33,7 +33,7 @@ public class LogFrontButtonsActionListeners {
                     ResultSet resultSet = preparedStatementstatement.executeQuery();
 
                     if (resultSet.next()) {
-                        cl.getFrame().setJMenuBar(cl.getMenuBar1());
+                        cl.getFrame().setJMenuBar(cl.getMicrosMenuBar());
                         cl.cardLayout.show(cl.getCont(), "3");
 
                     } else {

@@ -53,7 +53,7 @@ public class SignFrontButtonsActionListeners {
                         preparedStatementInsert.setString(4, email);
                         preparedStatementInsert.execute();
                         JOptionPane.showMessageDialog(null, "Data Registered Successfully");
-                        cl.getFrame().setJMenuBar(cl.getMenuBar1());
+                        cl.getFrame().setJMenuBar(cl.getLoginInMenuBar());
                         cl.cardLayout.show(cl.getCont(), "3");}
                         else{
                             JOptionPane.showMessageDialog(null, "incorrect email format");

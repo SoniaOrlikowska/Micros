@@ -12,8 +12,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Arrays;
+
 
 public class MicrosFrontButtonsActionListeners {
 
@@ -153,7 +152,7 @@ public class MicrosFrontButtonsActionListeners {
 
                     //todo sprawdzac czy takie zadnie przez takiego uzytkownika bylo juz rozwiazane
 
-                    User user = User.getInstance();
+                    User user = new User(cl.getLogFront().getUsernameField().getText(),cl.getLogFront().getPasswordField().getText());
 
                     String userName = user.getUserName();
                     String userID = user.getUserID(userName);
@@ -171,8 +170,8 @@ public class MicrosFrontButtonsActionListeners {
 
                     int resultSet = preparedStatement.executeUpdate();
 
-                    cl.getProfileFront().setUserNameString(userName); //todo nie dziala to przekazywanie do labelu w ProfileFront
-                    cl.getProfileFront().setUserScoreString(score);
+                    cl.getProfileFront().getUserName().setText(userName);
+                    cl.getProfileFront().getUserScore().setText("You solved " + String.valueOf(user.getUserTotalScore(userName)) + " problems");
 
                 } else {
                     // todo komunikat, że rozwiązanie jest niepoprawne

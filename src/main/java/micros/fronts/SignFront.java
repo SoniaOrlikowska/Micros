@@ -33,12 +33,14 @@ public class SignFront {
 
         signPanel.setLayout(gridBagLayout);
 
+
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.insets = new Insets(10, 10, 0, 0);
         gridBagConstraints.weightx = 1;
         signPanel.add(userName, gridBagConstraints);
+
 
         gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
         gridBagConstraints.gridx = 1;

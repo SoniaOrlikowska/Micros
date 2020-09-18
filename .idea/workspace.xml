@@ -2,35 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b3ddbf7-88c4-4f40-8937-e83a6ab9555f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/micros/main/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/micros/main/CardsActionListeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyCalki.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EasyCalki.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/CardsLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/CardsLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/LogFrontButtonsActionListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/LogFrontButtonsActionListeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/MicrosFrontButtonsActionListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/MicrosFrontButtonsActionListeners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/ProblemGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/ProblemVeryfier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/ProblemVeryfier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/SignFrontButtonsActionListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/SignFrontButtonsActionListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/UserScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/UserScore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/LogFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/LogFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/MicrosFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/MicrosFront.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/ProfileFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/ProfileFront.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/micros/fronts/SignFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/fronts/SignFront.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/micros/main/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/micros/main/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/CardsLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/CardsLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/LogFrontButtonsActionListeners$CancelButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/LogFrontButtonsActionListeners$CancelButtonActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/LogFrontButtonsActionListeners$LoginButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/LogFrontButtonsActionListeners$LoginButtonActionListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/LogFrontButtonsActionListeners.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/LogFrontButtonsActionListeners.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$CheckButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$CheckButtonActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$ClearButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$ClearButtonActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$GenerateButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$GenerateButtonActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$HintButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$HintButtonActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$SubmitButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners$SubmitButtonActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/MicrosFrontButtonsActionListeners.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/ProblemGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/ProblemVeryfier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/ProblemVeryfier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/SignFrontButtonsActionListeners$SubmitButtonActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/SignFrontButtonsActionListeners$SubmitButtonActionListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/LogFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/LogFront.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/MicrosFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/MicrosFront.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/ProfileFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/ProfileFront.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/micros/fronts/SignFront.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/fronts/SignFront.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/micros/main/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/micros/main/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -84,6 +84,9 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="micros.main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="micros" />
       <recent name="micros.listeners" />
@@ -191,18 +194,19 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="404" y="126" key="#Main_(1)/0.23.1440.852@0.23.1440.852" timestamp="1593753125356" />
-    <state x="320" y="114" key="#Project_Structure" timestamp="1599769911279">
-      <screen x="0" y="23" width="1440" height="852" />
+    <state x="320" y="96" key="#Project_Structure" timestamp="1600275026972">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="320" y="96" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1600275026972" />
     <state x="320" y="114" key="#Project_Structure/0.23.1440.852@0.23.1440.852" timestamp="1599769911279" />
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1593753939386">
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="458" y="222" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.852@0.23.1440.852" timestamp="1593753939386" />
-    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1600030425476">
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1600406432079">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1600030425476" />
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1600406432079" />
     <state x="878" y="88" key="#com.intellij.ide.util.MemberChooser/0.23.1440.852@0.23.1440.852" timestamp="1599990506154" />
     <state x="458" y="236" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1599592684798">
       <screen x="0" y="23" width="1440" height="852" />
@@ -236,25 +240,25 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="100" y="123" width="1240" height="652" key="DiffContextDialog/0.23.1440.852@0.23.1440.852" timestamp="1599389345743" />
-    <state width="1396" height="2" key="GridCell.Tab.0.bottom" timestamp="1600030541366">
+    <state width="1396" height="66" key="GridCell.Tab.0.bottom" timestamp="1600411822822">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="2" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600030541366" />
+    <state width="1396" height="66" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600411822822" />
     <state width="1396" height="295" key="GridCell.Tab.0.bottom/0.23.1440.852@0.23.1440.852" timestamp="1599990899896" />
-    <state width="1396" height="2" key="GridCell.Tab.0.center" timestamp="1600030541362">
+    <state width="1396" height="66" key="GridCell.Tab.0.center" timestamp="1600411822820">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="2" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600030541362" />
+    <state width="1396" height="66" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600411822820" />
     <state width="1396" height="295" key="GridCell.Tab.0.center/0.23.1440.852@0.23.1440.852" timestamp="1599990899895" />
-    <state width="1396" height="2" key="GridCell.Tab.0.left" timestamp="1600030541361">
+    <state width="1396" height="66" key="GridCell.Tab.0.left" timestamp="1600411822818">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="2" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600030541361" />
+    <state width="1396" height="66" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600411822818" />
     <state width="1396" height="295" key="GridCell.Tab.0.left/0.23.1440.852@0.23.1440.852" timestamp="1599990899895" />
-    <state width="1396" height="2" key="GridCell.Tab.0.right" timestamp="1600030541364">
+    <state width="1396" height="66" key="GridCell.Tab.0.right" timestamp="1600411822821">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1396" height="2" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600030541364" />
+    <state width="1396" height="66" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600411822821" />
     <state width="1396" height="295" key="GridCell.Tab.0.right/0.23.1440.852@0.23.1440.852" timestamp="1599990899896" />
     <state width="698" height="279" key="GridCell.Tab.1.bottom" timestamp="1599997036675">
       <screen x="0" y="0" width="1440" height="900" />
@@ -322,9 +326,10 @@
       <screen x="0" y="23" width="1440" height="852" />
     </state>
     <state x="385" y="204" key="run.anything.popup/0.23.1440.852@0.23.1440.852" timestamp="1598463340325" />
-    <state x="385" y="199" width="670" height="676" key="search.everywhere.popup" timestamp="1598814480697">
-      <screen x="0" y="23" width="1440" height="852" />
+    <state x="385" y="186" width="670" height="715" key="search.everywhere.popup" timestamp="1600278345130">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="385" y="186" width="670" height="715" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1600278345130" />
     <state x="385" y="199" width="670" height="676" key="search.everywhere.popup/0.23.1440.852@0.23.1440.852" timestamp="1598814480697" />
   </component>
 </project>
