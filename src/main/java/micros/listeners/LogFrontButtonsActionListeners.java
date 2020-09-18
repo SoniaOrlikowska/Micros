@@ -1,5 +1,7 @@
-package micros;
+package micros.listeners;
 
+import micros.DataBaseConnectivity;
+import micros.PasswordHashing;
 import micros.main.User;
 
 import javax.swing.*;

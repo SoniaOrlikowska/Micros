@@ -1,6 +1,6 @@
 package micros.fronts;
 
-import micros.MicrosFrontButtonsActionListeners;
+import micros.listeners.MicrosFrontButtonsActionListeners;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,11 +31,14 @@ public class MicrosFront {
     JButton submit = new JButton("Submit");
     JButton clear = new JButton("Clear");
 
+
+
     String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
 
 
     String numerZadania;
     String score;
+    String typZadania;
 
 
     ImageIcon hintIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/hint.png");
@@ -219,6 +222,9 @@ public class MicrosFront {
 
     }
 
+    public String getTypZadania() {
+        return typZadania;
+    }
 
     public JRadioButton getEasyRadio() {
         return easyRadio;
@@ -243,6 +249,8 @@ public class MicrosFront {
     public JLabel getZadanie() {
         return zadanie;
     }
+
+    public void setTypZadania(String typZadania) { this.typZadania = typZadania; }
 
     public JComboBox getDziedzina() {
         return dziedzina;

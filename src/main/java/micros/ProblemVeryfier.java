@@ -1,6 +1,6 @@
 package micros;
 
-import micros.CardsLayout;
+import micros.listeners.CardsLayout;
 
 import javax.swing.*;
 

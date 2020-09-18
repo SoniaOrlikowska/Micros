@@ -1,6 +1,10 @@
-package micros;
+package micros.listeners;
 
 
+import micros.DataBaseConnectivity;
+import micros.ProblemGenerator;
+import micros.ProblemVeryfier;
+import micros.main.Score;
 import micros.main.User;
 
 import javax.swing.*;
@@ -153,13 +157,16 @@ public class MicrosFrontButtonsActionListeners {
                     //todo sprawdzac czy takie zadnie przez takiego uzytkownika bylo juz rozwiazane
 
                     User user = new User(cl.getLogFront().getUsernameField().getText(),cl.getLogFront().getPasswordField().getText());
+                    Score scoreS = new Score();
 
                     String userName = user.getUserName();
                     String userID = user.getUserID(userName);
                     String problem = cl.getMicrosFront().getNumerZadania();
                     String score = cl.getMicrosFront().getScore();
+                    String problemType = cl.getMicrosFront().getTypZadania();
+                    System.out.println("Typ zadania to " + problemType);
 
-                    String insertUserScoreQueryString = "INSERT into SCORE ( ID_USER, PROBLEM, SCORE) values(?,?,?)";
+                    String insertUserScoreQueryString = "INSERT into SCORE ( ID_USER, PROBLEM, SCORE, TYPE) values(?,?,?,?)";
 
                     PreparedStatement preparedStatement = DataBaseConnectivity.getConnection()
                             .prepareStatement(insertUserScoreQueryString);
@@ -167,11 +174,13 @@ public class MicrosFrontButtonsActionListeners {
                     preparedStatement.setInt(1, Integer.parseInt(userID));
                     preparedStatement.setInt(2, Integer.parseInt(problem));
                     preparedStatement.setInt(3, Integer.parseInt(score));
+                    preparedStatement.setString(4, problemType);
 
                     int resultSet = preparedStatement.executeUpdate();
 
                     cl.getProfileFront().getUserName().setText(userName);
-                    cl.getProfileFront().getUserScore().setText("You solved " + String.valueOf(user.getUserTotalScore(userName)) + " problems");
+                    cl.getProfileFront().getUserScore().setText("You solved " + scoreS.getUserTotalScore(Integer.parseInt(userID))+ " problems");
+
 
                 } else {
                     // todo komunikat, że rozwiązanie jest niepoprawne

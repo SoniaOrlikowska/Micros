@@ -1,7 +1,5 @@
 package micros.fronts;
 
-import micros.main.User;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,9 +8,12 @@ public class ProfileFront {
     JPanel userProfilePanel = new JPanel();
     JLabel userName = new JLabel();
     JLabel userScore = new JLabel();
-    JLabel easyProblemsScore = new JLabel("8 easy problems");
-    JLabel mediumProblemsScore = new JLabel("2 medium problems");
-    JLabel hardProblemsScore = new JLabel("3 hard problems");
+    private String easyScore;
+    private String mediumScore;
+    private String hardScore;
+    JLabel easyProblemsScore = new JLabel(easyScore);
+    JLabel mediumProblemsScore = new JLabel(mediumScore);
+    JLabel hardProblemsScore = new JLabel(hardScore);
 //new Color(250, 20, 215)
 
     public ProfileFront() {
@@ -31,7 +32,7 @@ public class ProfileFront {
         gbc.gridy = 1;
         gbc.insets = new Insets(0, 10, 0, 0);
         gbc.weightx = 1;
-        userName.setFont(new Font("Serif",Font.PLAIN,60));
+        userName.setFont(new Font("Serif", Font.PLAIN, 60));
         userProfilePanel.add(userName, gbc);
 
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -39,7 +40,7 @@ public class ProfileFront {
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.insets = new Insets(10, 10, 0, 20);
-        userScore.setFont(new Font("Serif",Font.PLAIN,30));
+        userScore.setFont(new Font("Serif", Font.PLAIN, 30));
         gbc.weightx = 1;
         userProfilePanel.add(userScore, gbc);
 
@@ -49,9 +50,9 @@ public class ProfileFront {
         gbc.gridy = 3;
         gbc.insets = new Insets(25, 10, 5, 0);
         gbc.weightx = 1;
-        easyProblemsScore.setFont(new Font("Serif",Font.BOLD, 15));
+        easyProblemsScore.setFont(new Font("Serif", Font.BOLD, 15));
         userProfilePanel.add(easyProblemsScore, gbc);
-       //
+        //
 
         //JButton Sprawdz
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -59,7 +60,7 @@ public class ProfileFront {
         gbc.gridy = 4;
         gbc.insets = new Insets(5, 10, 5, 0);
         gbc.weightx = 1;
-        mediumProblemsScore.setFont(new Font("Serif",Font.BOLD, 15));
+        mediumProblemsScore.setFont(new Font("Serif", Font.BOLD, 15));
         userProfilePanel.add(mediumProblemsScore, gbc);
 
         //JButton Zapisz
@@ -68,14 +69,8 @@ public class ProfileFront {
         gbc.gridy = 5;
         gbc.insets = new Insets(5, 10, 5, 20);
         gbc.weightx = 1;
-        hardProblemsScore.setFont(new Font("Serif",Font.BOLD, 15));
+        hardProblemsScore.setFont(new Font("Serif", Font.BOLD, 15));
         userProfilePanel.add(hardProblemsScore, gbc);
-
-
-
-
-
-
 
     }
 
@@ -83,10 +78,38 @@ public class ProfileFront {
         return userProfilePanel;
     }
 
-    public JLabel getUserScore() { return userScore; }
-
-    public JLabel getUserName() { return userName; }
-
+    public JLabel getUserScore() {
+        return userScore;
     }
+
+    public JLabel getEasyProblemsScore() {
+        return easyProblemsScore;
+    }
+
+    public JLabel getMediumProblemsScore() {
+        return mediumProblemsScore;
+    }
+
+    public JLabel getHardProblemsScore() {
+        return hardProblemsScore;
+    }
+
+    public void setEasyScore(String easyScore) {
+        this.easyScore = easyScore;
+    }
+
+    public void setMediumScore(String mediumScore) {
+        this.mediumScore = mediumScore;
+    }
+
+    public void setHardScore(String hardScore) {
+        this.hardScore = hardScore;
+    }
+
+    public JLabel getUserName() {
+        return userName;
+    }
+
+}
 
 

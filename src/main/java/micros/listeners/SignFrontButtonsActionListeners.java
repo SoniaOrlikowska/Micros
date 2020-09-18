@@ -1,10 +1,13 @@
-package micros;
+package micros.listeners;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import micros.DataBaseConnectivity;
+import micros.PasswordHashing;
 import org.apache.commons.validator.routines.EmailValidator;
 
 

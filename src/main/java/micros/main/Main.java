@@ -1,9 +1,8 @@
 package micros.main;
 
-import micros.CardsLayout;
+import micros.listeners.CardsLayout;
 
 import javax.swing.*;
-import java.security.NoSuchAlgorithmException;
 
 public class Main {
     public static void main(String[] args) {

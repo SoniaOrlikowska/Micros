@@ -1,5 +1,7 @@
 package micros;
 
+import micros.listeners.CardsLayout;
+
 import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
@@ -15,11 +17,9 @@ public class ProblemGenerator {
     String trescZadania;
     String trescOdpowiedzi;
     String numerZadania;
+    String typZadania;
     String score;
     int linesCount;
-
-
-
     int wylosowaneZadanie;
 
     //Generator zadania
@@ -39,6 +39,7 @@ public class ProblemGenerator {
             trescZadania = stringT.nextToken();         //zmienna przechowujaca tresc zadania
             trescOdpowiedzi = stringT.nextToken();      //zmienna przechowujaca tresc odpowiedzi
             numerZadania = stringT.nextToken();
+            typZadania = stringT.nextToken();
             score = stringT.nextToken();
             System.out.println("PG Tresc:" + trescOdpowiedzi);
 
@@ -65,7 +66,9 @@ public class ProblemGenerator {
             cl.getMicrosFront().getZadanie().setIcon(new ImageIcon(name));
             cl.getMicrosFront().setPrawidlowaOdpowiedz(trescOdpowiedzi);
             cl.getMicrosFront().setNumerZadania(numerZadania);
+            cl.getMicrosFront().setTypZadania(typZadania);
             cl.getMicrosFront().setScore(score);
+
 
             for(File file1 : files) {
                 file1.delete();

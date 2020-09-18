@@ -1,1 +1,1 @@
-det A = \begin{bmatrix} 1/a & b & c \\c & 2/d & d\\e & 3/f & g \\\end{bmatrix};jhj;
+det A = \begin{bmatrix} 1/a & b & c \\c & 2/d & d\\e & 3/f & g \\\end{bmatrix};jhj;11;E;1;

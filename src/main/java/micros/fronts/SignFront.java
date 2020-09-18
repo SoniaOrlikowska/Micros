@@ -1,8 +1,7 @@
 package micros.fronts;
 
 
-import micros.CardsLayout;
-import micros.SignFrontButtonsActionListeners;
+import micros.listeners.SignFrontButtonsActionListeners;
 
 import javax.swing.*;
 import java.awt.*;

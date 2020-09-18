@@ -1,4 +1,4 @@
-package micros;
+package micros.listeners;
 
 import micros.fronts.LogFront;
 import micros.fronts.MicrosFront;
@@ -119,6 +119,9 @@ public class CardsLayout {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                profileFront.setEasyScore("E");
+                profileFront.setMediumScore("M");
+                profileFront.setHardScore("H");
                 cardLayout.show(Cont, "4");
                 frame.setJMenuBar(profileMenuBar);
             }
