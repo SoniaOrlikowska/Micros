@@ -1,9 +1,8 @@
 package micros.listeners;
 
-
 import micros.DataBaseConnectivity;
 import micros.ProblemGenerator;
-import micros.ProblemVeryfier;
+import micros.ProblemVerifier;
 import micros.main.Score;
 import micros.main.User;
 
@@ -17,11 +16,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.PreparedStatement;
 
-
+/**
+ * This class declares all problems source files, defines what kind of problem user chooses, and sets Action Listeners in Micros Card
+ **/
 public class MicrosFrontButtonsActionListeners {
 
+    //todo how to avoid absolute paths?
     public static class GenerateButtonActionListener implements ActionListener {
-        //Deklaracja wszystkich plikow
         //EasyFiles
         File easyCalki = new File("EasyCalki.txt");
         Path easyCalkiPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/EasyCalki.txt");
@@ -59,62 +60,62 @@ public class MicrosFrontButtonsActionListeners {
             JRadioButton easyRadio = cl.getMicrosFront().getEasyRadio();
             JRadioButton mediumRadio = cl.getMicrosFront().getMediumRadio();
             JRadioButton hardRadio = cl.getMicrosFront().getHardRadio();
-            String[] dziedziny = cl.getMicrosFront().getDziedziny();
-            JComboBox dziedzina = cl.getMicrosFront().getDziedzina();
+            // String[] problemTypes = cl.getMicrosFront().getProblemTypes();
+            JComboBox<String> problemTypesComboBox = cl.getMicrosFront().getProblemTypesComboBox();
             File file;
             Path path;
 
             //EasyCałki
-            if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+            if (easyRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 0) {
 
                 file = easyCalki;
                 path = easyCalkiPath;
                 new ProblemGenerator(file, path);
             }
             //EasyPochodne
-            else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+            else if (easyRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 1) {
                 file = easyPochodne;
                 path = easyPochodnePath;
                 new ProblemGenerator(file, path);
             }
             //EasyMatrix
-            else if (easyRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+            else if (easyRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 2) {
                 file = easyMatrix;
                 path = easyMatrixPath;
                 new ProblemGenerator(file, path);
             }
             //MediumCałki
-            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+            else if (mediumRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 0) {
                 file = mediumCalki;
                 path = mediumCalkiPath;
                 new ProblemGenerator(file, path);
             }
             //MediumPochodne
-            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+            else if (mediumRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 1) {
                 file = mediumPochodne;
                 path = mediumPochodnePath;
                 new ProblemGenerator(file, path);
             }
             //MediumMatrix
-            else if (mediumRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+            else if (mediumRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 2) {
                 file = mediumMatrix;
                 path = mediumMatrixPath;
                 new ProblemGenerator(file, path);
             }
             //HardCałki
-            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 0) {
+            else if (hardRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 0) {
                 file = hardCalki;
                 path = hardCalkiPath;
                 new ProblemGenerator(file, path);
             }
             //HardPochodne
-            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 1) {
+            else if (hardRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 1) {
                 file = hardPochodne;
                 path = hardPochodnePath;
                 new ProblemGenerator(file, path);
             }
             //HardMatrix
-            else if (hardRadio.isSelected() && dziedzina.getSelectedIndex() == 2) {
+            else if (hardRadio.isSelected() && problemTypesComboBox.getSelectedIndex() == 2) {
                 file = hardMatrix;
                 path = hardMatrixPath;
                 new ProblemGenerator(file, path);
@@ -128,8 +129,8 @@ public class MicrosFrontButtonsActionListeners {
         public void actionPerformed(ActionEvent e) {
             CardsLayout cl = CardsLayout.getInstance();
 
-            cl.getMicrosFront().getZadanie().setIcon(null);
-            cl.getMicrosFront().getRozwiazanie().setText("");
+            cl.getMicrosFront().getProblemLabel().setIcon(null);
+            cl.getMicrosFront().getYourSolution().setText("");
         }
     }
 
@@ -137,8 +138,8 @@ public class MicrosFrontButtonsActionListeners {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            ProblemVeryfier problemVeryfier = new ProblemVeryfier();
-            problemVeryfier.ProblemVeryfier();
+            ProblemVerifier problemVerifier = new ProblemVerifier();
+            problemVerifier.ProblemVerifier();
         }
     }
 
@@ -147,24 +148,21 @@ public class MicrosFrontButtonsActionListeners {
         @Override
         public void actionPerformed(ActionEvent e) {
             CardsLayout cl = CardsLayout.getInstance();
-            ProblemVeryfier problemVeryfier = new ProblemVeryfier();
-            problemVeryfier.ProblemVeryfier();
+            ProblemVerifier problemVerifier = new ProblemVerifier();
+            problemVerifier.ProblemVerifier();
 
 
             try {
-                if (problemVeryfier.isFlag()) {
+                if (problemVerifier.isFlag()) {
 
-                    //todo sprawdzac czy takie zadnie przez takiego uzytkownika bylo juz rozwiazane
-
-                    User user = new User(cl.getLogFront().getUsernameField().getText(),cl.getLogFront().getPasswordField().getText());
+                    User user = new User(cl.getLogFront().getUsernameField().getText(), String.valueOf(cl.getLogFront().getPasswordField().getPassword()));
                     Score scoreS = new Score();
 
                     String userName = user.getUserName();
                     String userID = user.getUserID(userName);
-                    String problem = cl.getMicrosFront().getNumerZadania();
+                    String problem = cl.getMicrosFront().getProblemNumber();
                     String score = cl.getMicrosFront().getScore();
-                    String problemType = cl.getMicrosFront().getTypZadania();
-                    System.out.println("Typ zadania to " + problemType);
+                    String problemType = cl.getMicrosFront().getProblemLevel();
 
                     String insertUserScoreQueryString = "INSERT into SCORE ( ID_USER, PROBLEM, SCORE, TYPE) values(?,?,?,?)";
 
@@ -178,12 +176,19 @@ public class MicrosFrontButtonsActionListeners {
 
                     int resultSet = preparedStatement.executeUpdate();
 
+                    int easyScore = scoreS.getTypeScore(Integer.parseInt(userID), "E");
+                    int mediumScore = scoreS.getTypeScore(Integer.parseInt(userID), "M");
+                    int hardScore = scoreS.getTypeScore(Integer.parseInt(userID), "H");
+
+                    //todo przeniesc to do profileAction Listenera zeby bylo dodstepne zawsze a nie po kliknieciu w submit
+
                     cl.getProfileFront().getUserName().setText(userName);
-                    cl.getProfileFront().getUserScore().setText("You solved " + scoreS.getUserTotalScore(Integer.parseInt(userID))+ " problems");
-
-
+                    cl.getProfileFront().getUserScore().setText("You solved " + scoreS.getUserTotalScore(Integer.parseInt(userID)) + " problems");
+                    cl.getProfileFront().getEasyProblemsScore().setText("You solved: " + easyScore + " easy problems");
+                    cl.getProfileFront().getMediumProblemsScore().setText("You solved: " + mediumScore + " medium problems");
+                    cl.getProfileFront().getHardProblemsScore().setText("You solved: " + hardScore + " hard problems");
                 } else {
-                    // todo komunikat, że rozwiązanie jest niepoprawne
+                    JOptionPane.showMessageDialog(null, "Your solution is incorrect. Try again", "Wrong answer", JOptionPane.INFORMATION_MESSAGE);
 
                 }
             } catch (Exception ex) {
@@ -194,11 +199,12 @@ public class MicrosFrontButtonsActionListeners {
 
     public static class HintButtonActionListener extends MouseAdapter {
 
+        //todo this should be added. App doesn't show hints yet
         @Override
         public void mouseClicked(MouseEvent e) {
             CardsLayout cl = CardsLayout.getInstance();
-            JLabel zadanie = cl.getMicrosFront().getZadanie();
-            if (zadanie.getIcon() != null) {
+            JLabel problem = cl.getMicrosFront().getProblemLabel();
+            if (problem.getIcon() != null) {
                 JOptionPane.showMessageDialog(null, "Hint", "hint", JOptionPane.INFORMATION_MESSAGE);
             }
         }

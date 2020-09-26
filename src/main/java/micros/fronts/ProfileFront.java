@@ -3,18 +3,24 @@ package micros.fronts;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class set layout for Profile Panel
+ **/
+
 public class ProfileFront {
+    //todo nie dziala wchodze bezposrenido na profil trzeba najpieerw rozwiazac zadanie
 
     JPanel userProfilePanel = new JPanel();
-    JLabel userName = new JLabel();
-    JLabel userScore = new JLabel();
+
     private String easyScore;
     private String mediumScore;
     private String hardScore;
-    JLabel easyProblemsScore = new JLabel(easyScore);
-    JLabel mediumProblemsScore = new JLabel(mediumScore);
-    JLabel hardProblemsScore = new JLabel(hardScore);
-//new Color(250, 20, 215)
+
+    private JLabel userName = new JLabel();
+    private JLabel userScore = new JLabel();
+    private JLabel easyProblemsScore = new JLabel(easyScore);
+    private JLabel mediumProblemsScore = new JLabel(mediumScore);
+    private JLabel hardProblemsScore = new JLabel(hardScore);
 
     public ProfileFront() {
 

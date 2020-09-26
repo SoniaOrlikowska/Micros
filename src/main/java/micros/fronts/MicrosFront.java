@@ -5,66 +5,55 @@ import micros.listeners.MicrosFrontButtonsActionListeners;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class set layout for Micros Panel, and add ActionListeners to the buttons
+ **/
 
 public class MicrosFront {
-    //todo druga karta profil z liczba uzyskanych punktow(sprawdzanie czy dane zadanie nie bylo juz rozwiazane), 3 karta zadanie, no i dorobic wskazowki
-
+    //todo sprawdzanie czy dane zadanie nie bylo juz rozwiazane), 3 karta zadanie, no i dorobic wskazowki
 
     JPanel microsPanel = new JPanel();
-    JLabel wybierzPoziom = new JLabel("Wybierz poziom:");
+    JLabel chooseLevel = new JLabel("Wybierz poziom:");
     JRadioButton easyRadio = new JRadioButton("Easy");
     JRadioButton mediumRadio = new JRadioButton("Medium");
     JRadioButton hardRadio = new JRadioButton("Hard");
-    JLabel wybierzDziedzine = new JLabel("Wybierz dziedzinę:");
-    String[] dziedziny = {"Całki", "Pochodne", "Macierze"};
-    JComboBox dziedzina = new JComboBox(dziedziny);
+    JLabel chooseProblemType = new JLabel("Wybierz dziedzinę:");
+    String[] problemTypes = {"Całki", "Pochodne", "Macierze"};
+    JComboBox<String> problemTypesComboBox = new JComboBox<>(problemTypes);
 
-
-    JLabel zadanie = new JLabel();
-    JLabel twojeRozwiazanieLabel = new JLabel("Odpowiedź:");
+    JLabel problemLabel = new JLabel();
+    JLabel yourSolutionLabel = new JLabel("Odpowiedź:");
     JLabel hint = new JLabel();
-    JTextArea rozwiazanie = new JTextArea(3, 4);
-
+    JTextArea yourSolution = new JTextArea(3, 4);
 
     JButton generate = new JButton("Generate");
     JButton check = new JButton("Check");
     JButton submit = new JButton("Submit");
     JButton clear = new JButton("Clear");
 
-
-
-    String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
-
-
-    String numerZadania;
+    String theCorrectAnswer;                    //zmienna przechowująca wartość poprawnej odpowiedzi
+    String problemNumber;
     String score;
-    String typZadania;
-
+    String problemLevel;
 
     ImageIcon hintIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/hint.png");
-    ImageIcon back = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/back.png");
-    ImageIcon woman = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
+    ImageIcon backIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/back.png");
+    ImageIcon womanIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
 
-
-    //Layout setup
     public MicrosFront() {
 
-        // set panel layout and look
         GridBagLayout gbl = new GridBagLayout();
         GridBagConstraints gbc = new GridBagConstraints();
         microsPanel.setLayout(gbl);
         microsPanel.setBackground(Color.white);
-
-        // Add components to panel
 
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        microsPanel.add(wybierzPoziom, gbc);
+        microsPanel.add(chooseLevel, gbc);
 
-        //RadioButton Easy
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -72,7 +61,6 @@ public class MicrosFront {
         gbc.weightx = 1;
         microsPanel.add(easyRadio, gbc);
 
-        //RadioButton Medium
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 1;
         gbc.gridy = 1;
@@ -80,7 +68,6 @@ public class MicrosFront {
         gbc.weightx = 1;
         microsPanel.add(mediumRadio, gbc);
 
-        //RadioButton Hard
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
         gbc.gridy = 1;
@@ -88,30 +75,26 @@ public class MicrosFront {
         gbc.weightx = 1;
         microsPanel.add(hardRadio, gbc);
 
-        //Set Radio Buttons in group
         ButtonGroup radioButtonsGroup = new ButtonGroup();
         radioButtonsGroup.add(easyRadio);
         radioButtonsGroup.add(mediumRadio);
         radioButtonsGroup.add(hardRadio);
 
-        //JLabel Dziedzina
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        microsPanel.add(wybierzDziedzine, gbc);
+        microsPanel.add(chooseProblemType, gbc);
 
-        //JCombobox Dziedzina
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 2;
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        microsPanel.add(dziedzina, gbc);
+        microsPanel.add(problemTypesComboBox, gbc);
 
-        //Generuj JButton
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
         gbc.gridy = 3;
@@ -119,25 +102,22 @@ public class MicrosFront {
         gbc.weightx = 1;
         microsPanel.add(generate, gbc);
 
-        //JLabel tresc zadania
         gbc.fill = GridBagConstraints.BOTH;
         gbc.gridwidth = 4;
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.insets = new Insets(15, 20, 10, 10);
         gbc.weightx = 1;
-        microsPanel.add(zadanie, gbc);
-        zadanie.setPreferredSize(new Dimension(100, 90));
+        microsPanel.add(problemLabel, gbc);
+        problemLabel.setPreferredSize(new Dimension(100, 90));
 
-        //JLabel rozwiązanie
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 5;
         gbc.insets = new Insets(10, 10, 0, 0);
         gbc.weightx = 1;
-        microsPanel.add(twojeRozwiazanieLabel, gbc);
+        microsPanel.add(yourSolutionLabel, gbc);
 
-        //JLabel hint
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
         gbc.gridy = 5;
@@ -146,7 +126,6 @@ public class MicrosFront {
         microsPanel.add(hint, gbc);
         hint.setIcon(hintIcon);
 
-        //JTextArea Rozwiązanie
         gbc.fill = GridBagConstraints.BOTH;
         gbc.gridwidth = 4;
         gbc.gridheight = 1;
@@ -154,10 +133,9 @@ public class MicrosFront {
         gbc.gridy = 6;
         gbc.insets = new Insets(10, 10, 0, 10);
         gbc.weightx = 1;
-        microsPanel.add(rozwiazanie, gbc);
-        rozwiazanie.setBorder(BorderFactory.createEtchedBorder());
+        microsPanel.add(yourSolution, gbc);
+        yourSolution.setBorder(BorderFactory.createEtchedBorder());
 
-        //Clear JButton
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 1;
         gbc.gridx = 0;
@@ -166,7 +144,6 @@ public class MicrosFront {
         gbc.weightx = 1;
         microsPanel.add(clear, gbc);
 
-        //JButton Sprawdz
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = 1;
         gbc.gridx = 1;
@@ -175,7 +152,6 @@ public class MicrosFront {
         gbc.weightx = 1;
         microsPanel.add(check, gbc);
 
-        //JButton Zapisz
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
         gbc.gridy = 8;
@@ -183,33 +159,8 @@ public class MicrosFront {
         gbc.weightx = 1;
         microsPanel.add(submit, gbc);
 
-
         addActionListeners();
 
-    }
-
-    public String getNumerZadania() {
-        return numerZadania;
-    }
-
-    public void setPrawidlowaOdpowiedz(String prawidlowaOdpowiedz) {
-        this.prawidlowaOdpowiedz = prawidlowaOdpowiedz;
-    }
-
-    public void setNumerZadania(String numerZadania) {
-        this.numerZadania = numerZadania;
-    }
-
-    public String getPrawidlowaOdpowiedz() {
-        return prawidlowaOdpowiedz;
-    }
-
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
     }
 
     private void addActionListeners() {
@@ -222,8 +173,33 @@ public class MicrosFront {
 
     }
 
-    public String getTypZadania() {
-        return typZadania;
+    public String getProblemNumber() {
+        return problemNumber;
+    }
+
+    public void setTheCorrectAnswer(String theCorrectAnswer) {
+        this.theCorrectAnswer = theCorrectAnswer;
+    }
+
+    public void setProblemNumber(String problemNumber) {
+        this.problemNumber = problemNumber;
+    }
+
+    public String getTheCorrectAnswer() {
+        return theCorrectAnswer;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+
+    public String getProblemLevel() {
+        return problemLevel;
     }
 
     public JRadioButton getEasyRadio() {
@@ -238,26 +214,28 @@ public class MicrosFront {
         return hardRadio;
     }
 
-    public JTextArea getRozwiazanie() {
-        return rozwiazanie;
+    public JTextArea getYourSolution() {
+        return yourSolution;
     }
 
     public JPanel getUI() {
         return microsPanel;
     }
 
-    public JLabel getZadanie() {
-        return zadanie;
+    public JLabel getProblemLabel() {
+        return problemLabel;
     }
 
-    public void setTypZadania(String typZadania) { this.typZadania = typZadania; }
-
-    public JComboBox getDziedzina() {
-        return dziedzina;
+    public void setProblemLevel(String problemLevel) {
+        this.problemLevel = problemLevel;
     }
 
-    public String[] getDziedziny() {
-        return dziedziny;
+    public JComboBox<String> getProblemTypesComboBox() {
+        return problemTypesComboBox;
+    }
+
+    public String[] getProblemTypes() {
+        return problemTypes;
     }
 }
 

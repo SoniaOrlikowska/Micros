@@ -7,10 +7,8 @@ import java.sql.ResultSet;
 
 public class Score {
 
-    private String problemType;
     private int totalScore;
     private int typeScore;
-
 
     public Score() {
 
@@ -39,7 +37,6 @@ public class Score {
     }
 
     public int getTypeScore(int userID, String problemType) {
-        this.problemType = problemType;
         try {
             String findUserScore = "SELECT SUM(SCORE) FROM SCORE WHERE ID_USER = ? AND TYPE = ?";
             PreparedStatement preparedStatement = DataBaseConnectivity.getConnection()
@@ -51,7 +48,7 @@ public class Score {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-               typeScore  = resultSet.getInt("SUM(SCORE)");
+                typeScore = resultSet.getInt("SUM(SCORE)");
             }
 
         } catch (Exception ex) {

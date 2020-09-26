@@ -5,6 +5,10 @@ import micros.listeners.LogFrontButtonsActionListeners;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * This class set layout for Log Panel, and add ActionListeners to the buttons
+ **/
+
 public class LogFront {
 
     JPanel logPanel = new JPanel();
@@ -80,7 +84,6 @@ public class LogFront {
         logPanel.add(signIn, gridBagConstraints);
         signIn.setForeground(Color.BLUE);
 
-
         addActionListeners();
 
     }
@@ -91,8 +94,6 @@ public class LogFront {
         cancel.addActionListener(new LogFrontButtonsActionListeners.CancelButtonActionListener());
     }
 
-
-
     public JPanel getLogUI() {
         return this.logPanel;
     }
@@ -101,7 +102,9 @@ public class LogFront {
         return usernameField;
     }
 
-    public JPasswordField getPasswordField() { return passwordField; }
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
 
     public JLabel getSignIn() {
         return this.signIn;

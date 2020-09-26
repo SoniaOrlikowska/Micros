@@ -8,15 +8,14 @@ import micros.main.User;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
- * This Class is setting CardLayout and ActionListeners for MenuBars and ClickHere
+ * This Class is setting CardLayout, Frame. ActionListeners for MenuBars and ClickHere blue field. CardLayout class is set as a singleton.
  **/
 
+//todo after ClickHere wrong menubar is set
 public class CardsLayout {
 
     private static CardsLayout instance;
@@ -24,7 +23,7 @@ public class CardsLayout {
     CardLayout cardLayout = new CardLayout();
 
     JFrame frame = new JFrame("Mikros");
-    JPanel Cont = new JPanel();
+    JPanel container = new JPanel();
 
     SignFront signFront = new SignFront();
     JPanel firstSignPanel = signFront.getSignPanel();
@@ -54,27 +53,26 @@ public class CardsLayout {
     JMenuItem logOutProfile = new JMenuItem();
 
     String userName = logFront.getUsernameField().getText();
-    String userPassword = logFront.getPasswordField().getText();
+    String userPassword = String.valueOf(logFront.getPasswordField().getPassword());
 
     private Icon backIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/back.png");
-    private Icon womanIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
-    private Icon logoutIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/logout.png");
 
     private CardsLayout() {
 
         Frame();
 
-        Cont.setLayout(cardLayout);
+        container.setLayout(cardLayout);
 
-        Cont.add(firstSignPanel, "1");
-        Cont.add(secondLogPanel, "2");
-        Cont.add(thirdMicrosPanel, "3");
-        Cont.add(profileFrontPanel, "4");
+        container.add(firstSignPanel, "1");
+        container.add(secondLogPanel, "2");
+        container.add(thirdMicrosPanel, "3");
+        container.add(profileFrontPanel, "4");
 
-        cardLayout.show(Cont, "2");
+        cardLayout.show(container, "2");
 
         //Micros MenuBar
         backMenuMicros.setIcon(backIcon);
+        Icon womanIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/woman.png");
         profileMenuMicros.setIcon(womanIcon);
         microsMenuBar.add(backMenuMicros);
         microsMenuBar.add(emptyMicros);
@@ -82,10 +80,16 @@ public class CardsLayout {
 
         //Profile MenuBar
         backMenuProfile.setIcon(backIcon);
+        Icon logoutIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/logout.png");
         logOutProfile.setIcon(logoutIcon);
         profileMenuBar.add(backMenuProfile);
         profileMenuBar.add(emptyProfile);
         profileMenuBar.add(logOutProfile);
+
+        ActionListeners();
+    }
+
+    public void ActionListeners() {
 
         //LogFront ClickHere Listener
         clickHere.addMouseListener(new MouseAdapter() {
@@ -95,73 +99,57 @@ public class CardsLayout {
                 backMenuSignIn.setIcon(backIcon);
                 loginInMenuBar.add(backMenuSignIn);
                 frame.setJMenuBar(loginInMenuBar);
-                cardLayout.show(Cont, "1");
-
+                cardLayout.show(container, "1");
             }
         });
 
         //MicrosFront MenuBar Listeners
-        backMenuMicros.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-                User user = new User();
-                user.forgetUser(userName, userPassword);
+        backMenuMicros.addActionListener(e -> {
 
-                cardLayout.show(Cont, "2");
-                frame.setJMenuBar(loginInMenuBar);
-                //logFront.getUsernameField().setText("");
-                //logFront.getPasswordField().setText("");
-            }
+            User user = new User();
+            user.forgetUser(userName, userPassword);
+            cardLayout.show(container, "2");
+            frame.setJMenuBar(loginInMenuBar);
+
         });
 
-        profileMenuMicros.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        profileMenuMicros.addActionListener(e -> {
 
-                profileFront.setEasyScore("E");
-                profileFront.setMediumScore("M");
-                profileFront.setHardScore("H");
-                cardLayout.show(Cont, "4");
-                frame.setJMenuBar(profileMenuBar);
-            }
+            profileFront.setEasyScore("E");
+            profileFront.setMediumScore("M");
+            profileFront.setHardScore("H");
+            cardLayout.show(container, "4");
+            frame.setJMenuBar(profileMenuBar);
         });
 
         //ProfileFront MenuBars Listeners
-        backMenuProfile.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        backMenuProfile.addActionListener(e -> {
 
-                cardLayout.show(Cont, "3");
-                frame.setJMenuBar(microsMenuBar);
-            }
+            cardLayout.show(container, "3");
+            frame.setJMenuBar(microsMenuBar);
         });
 
-        logOutProfile.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        logOutProfile.addActionListener(e -> {
 
-                User user = new User();
-                user.forgetUser(userName, userPassword);
-                cardLayout.show(Cont, "2");
-                frame.setJMenuBar(null);
-            }
+            User user = new User();
+            user.forgetUser(userName, userPassword);
+            cardLayout.show(container, "2");
+            frame.setJMenuBar(null);
         });
 
         //SignInFront MenuBar Listener
-        backMenuSignIn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.setJMenuBar(null);
-                cardLayout.show(Cont, "2");
-                System.out.println("Back menu");
-            }
+        backMenuSignIn.addActionListener(e -> {
+            frame.setJMenuBar(null);
+            cardLayout.show(container, "2");
+            System.out.println("Back menu");
         });
+
     }
 
     public void Frame() {
 
-        frame.getContentPane().add(Cont);
+        frame.getContentPane().add(container);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 550);
@@ -191,8 +179,8 @@ public class CardsLayout {
         return microsFront;
     }
 
-    public JPanel getCont() {
-        return Cont;
+    public JPanel getContainer() {
+        return container;
     }
 
     public JMenuBar getLoginInMenuBar() {

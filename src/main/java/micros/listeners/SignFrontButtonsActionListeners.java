@@ -12,8 +12,8 @@ import org.apache.commons.validator.routines.EmailValidator;
 
 
 public class SignFrontButtonsActionListeners {
-    //todo musi sprawdzac:
-    // 2.czy haslo ma odpowiednie parametry,(opcjonalnie)
+
+    //todo czy haslo ma odpowiednie parametry,(opcjonalnie)
 
     public static class SubmitButtonActionListener implements ActionListener {
 
@@ -25,10 +25,9 @@ public class SignFrontButtonsActionListeners {
 
             try {
                 String userName = cl.getSignFront().getUserNameField().getText();
-                String password = ph.HashPassword(cl.getSignFront().getPassField().getText());
-                String passValidation = ph.HashPassword(cl.getSignFront().getPasValField().getText());
+                String password = ph.HashPassword(String.valueOf(cl.getSignFront().getPasswordField().getPassword()));
+                String passValidation = ph.HashPassword(String.valueOf(cl.getSignFront().getPasswordValidationField().getPassword()));
                 String email = cl.getSignFront().getEmailField().getText();
-
 
                 String checkUserNameQueryString = "SELECT * from USER WHERE USERNAME  = ? ";
                 String insertUserDataQueryStirng = "INSERT into USER ( USERNAME, PASSWORD, CONFIRM_PASSWORD, EMAIL) values(?,?,?,?)";
@@ -40,25 +39,24 @@ public class SignFrontButtonsActionListeners {
 
                 ResultSet resultSet = preparedStatement.executeQuery();
 
-                //sprawdzenie czy nie ma juz takiej nazwy użytkownika w bazie
+             //Checking if username already exists
                 if (!resultSet.next()) {
                     PreparedStatement preparedStatementInsert = DataBaseConnectivity.getConnection()
                             .prepareStatement(insertUserDataQueryStirng);
 
-                    //sprawdzanie czy pola hasla sa identyczne
-                    if (password.equals(passValidation) ) {
-                        if(validator.isValid(email)){
-                        //Executing query
+                    //checking if passwords are the same
+                    if (password.equals(passValidation)) {
+                        if (validator.isValid(email)) {
 
-                        preparedStatementInsert.setString(1, userName);
-                        preparedStatementInsert.setString(2, password);
-                        preparedStatementInsert.setString(3, passValidation);
-                        preparedStatementInsert.setString(4, email);
-                        preparedStatementInsert.execute();
-                        JOptionPane.showMessageDialog(null, "Data Registered Successfully");
-                        cl.getFrame().setJMenuBar(cl.getLoginInMenuBar());
-                        cl.cardLayout.show(cl.getCont(), "3");}
-                        else{
+                            preparedStatementInsert.setString(1, userName);
+                            preparedStatementInsert.setString(2, password);
+                            preparedStatementInsert.setString(3, passValidation);
+                            preparedStatementInsert.setString(4, email);
+                            preparedStatementInsert.execute();
+                            JOptionPane.showMessageDialog(null, "Data Registered Successfully");
+                            cl.getFrame().setJMenuBar(cl.getLoginInMenuBar());
+                            cl.cardLayout.show(cl.getContainer(), "3");
+                        } else {
                             JOptionPane.showMessageDialog(null, "incorrect email format");
                         }
 
@@ -72,7 +70,6 @@ public class SignFrontButtonsActionListeners {
                             "Username already exists",
                             "Username already exists",
                             JOptionPane.ERROR_MESSAGE);
-
                 }
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -86,10 +83,9 @@ public class SignFrontButtonsActionListeners {
 
             CardsLayout cl = CardsLayout.getInstance();
             cl.getSignFront().getUserNameField().setText("");
-            cl.getSignFront().getPassField().setText("");
-            cl.getSignFront().getPasValField().setText("");
+            cl.getSignFront().getPasswordField().setText("");
+            cl.getSignFront().getPasswordValidationField().setText("");
             cl.getSignFront().getEmailField().setText("");
-
 
         }
     }

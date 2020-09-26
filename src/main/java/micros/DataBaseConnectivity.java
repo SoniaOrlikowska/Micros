@@ -10,11 +10,11 @@ public class DataBaseConnectivity {
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
 
-        Connection connection = null;
+        Connection connection;
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD); //todo czy to jest zamkniete connection?!
+            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD); //todo czy to jest zamkniete connection?!
             System.out.println("Connected database successfully...");
             System.out.println("Connection = " + connection);
             System.out.println("Database name = " + connection.getCatalog());
