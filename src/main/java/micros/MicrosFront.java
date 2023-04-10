@@ -32,42 +32,42 @@ public class MicrosFront implements ActionListener {
     File file;                                     //zmienna do przechowywania pliku z którego generowane jest zadanie
     Path path;                                     // zmienna przechowująca ścieżkę pliku file
     String prawidlowaOdpowiedz;                    //zmienna przechowująca wartość poprawnej odpowiedzi
-    ImageIcon blednaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/wrong.png");
-    ImageIcon poprawnaIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/correct.png");
-    ImageIcon hintIcon = new ImageIcon("/Users/soniaorlikowska/IdeaProjects/Micros/hint.png");
+    ImageIcon blednaIcon = new ImageIcon("./wrong.png");
+    ImageIcon poprawnaIcon = new ImageIcon("./correct.png");
+    ImageIcon hintIcon = new ImageIcon("./hint.png");
 
 
     //Deklaracja wszystkich plikow
 
     //EasyFiles
     File easyCalki = new File("EasyCalki.txt");
-    Path easyCalkiPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/EasyCalki.txt");
+    Path easyCalkiPath = Paths.get("./EasyCalki.txt");
 
     File easyPochodne = new File("EasyPochodne.txt");
-    Path easyPochodnePath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/EasyPochodne.txt");
+    Path easyPochodnePath = Paths.get("./EasyPochodne.txt");
 
     File easyMatrix = new File("EasyMacierze.txt");
-    Path easyMatrixPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/EasyMacierze.txt");
+    Path easyMatrixPath = Paths.get("./EasyMacierze.txt");
 
     //MediumFiles
     File mediumCalki = new File("MediumCalki.txt");
-    Path mediumCalkiPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/MediumCalki.txt");
+    Path mediumCalkiPath = Paths.get("./MediumCalki.txt");
 
     File mediumPochodne = new File("MediumPochodne.txt");
-    Path mediumPochodnePath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/MediumPochodne.txt");
+    Path mediumPochodnePath = Paths.get("./MediumPochodne.txt");
 
     File mediumMatrix = new File("MediumMacierze.txt");
-    Path mediumMatrixPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/MediumMacierze.txt");
+    Path mediumMatrixPath = Paths.get("./MediumMacierze.txt");
 
     //HardFiles
     File hardCalki = new File("HardCalki.txt");
-    Path hardCalkiPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/HardCalki.txt");
+    Path hardCalkiPath = Paths.get("./HardCalki.txt");
 
     File hardPochodne = new File("HardPochodne.txt");
-    Path hardPochodnePath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/HardPochodne.txt");
+    Path hardPochodnePath = Paths.get("./HardPochodne.txt");
 
     File hardMatrix = new File("HardMacierze.txt");
-    Path hardMatrixPath = Paths.get("/Users/soniaorlikowska/IdeaProjects/Micros/HardMacierze.txt");
+    Path hardMatrixPath = Paths.get("./HardMacierze.txt");
 
     //Layout setup
     public MicrosFront() {
@@ -264,8 +264,9 @@ public class MicrosFront implements ActionListener {
             }
         }
         ProblemGenerator problemGenerator = new ProblemGenerator(file, path);
-        File file = new File("/Users/soniaorlikowska/IdeaProjects/Micros/src/main/resources/");
+        File file = new File("./src/main/resources/");
         File[] files = file.listFiles();
+
         Arrays.sort(files, new Comparator<File>() {
             @Override
             public int compare(File o1, File o2) {
